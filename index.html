@@ -31,8 +31,6 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="msapplication-config" content="/assets/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="styles/index.css" />
     <!--Importing GSAP core-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <!--End GSAP core import-->
@@ -56,6 +54,10 @@
     <script src="/scripts/index.js" defer></script>
     <script src="/scripts/onboarding.js" defer></script>
     <script src="/scripts/wowCoolMap.js" defer></script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/map.css" />
   </head>
   <header>
     <nav>
@@ -85,11 +87,11 @@
         <div class="empty"></div>
       </div>
     </section>
-    <div class="sonner" id="onboarding">
+    <div class="sonner" id="onboarding" onclick="alert('Hmmm... No work :(. Not yet at least...')">
       <div class="wrap-i">
         <div class="text">
           <h2>Hey there!</h2>
-          <p>What do I do? Click me to find out!</p>
+          <p>Oh look! A button!</p>
         </div>
         <button>
           <span class="material-symbols-outlined"> arrow_downward </span>

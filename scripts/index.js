@@ -28,7 +28,7 @@ gsap.from(".heroContent > .path", {
 gsap.from(".heroContent > h1", {
     opacity: 0,
     duration: 0.5,
-    delay: 3,
+    delay: 2.5,
 })
 
 gsap.from("header, nav", {
@@ -39,7 +39,7 @@ gsap.from("header, nav", {
 
 gsap.from(".sonner", {
   y: 130,
-  delay: 4,
+  delay: 3,
   duration: 1,
   ease: "back.out"
 });
