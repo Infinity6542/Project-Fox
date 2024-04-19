@@ -10,3 +10,8 @@ input[type="checkbox"] {
     user-select: none;
     display: none;
 }
+
+body {
+    position: absolute;
+    top: 98px !important;
+}
