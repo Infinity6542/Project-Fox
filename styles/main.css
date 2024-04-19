@@ -156,6 +156,7 @@ header > nav .logo img {
   margin-top: auto;
   margin-bottom: auto;
   padding: 10px;
+  align-items: center;
 }
 
 .sonner > .wrap-i .text {
