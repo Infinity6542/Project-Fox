@@ -1,0 +1,12 @@
+.complete {
+    color: green;
+}
+
+.incomplete {
+    color: red;
+}
+
+input[type="checkbox"] {
+    user-select: none;
+    display: none;
+}

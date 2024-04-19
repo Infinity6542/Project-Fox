@@ -1,0 +1,173 @@
+.bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg .component-1 {
+  position: absolute;
+  top: 98px;
+  left: 0px;
+}
+
+.bg .component-2 {
+  position: absolute;
+  bottom: 0px;
+  right: 15%;
+}
+
+.main-text {
+  position: absolute;
+  top: 125px;
+  left: 100px;
+}
+
+.main-text h1 {
+  position: relative;
+  background: none;
+  font-size: 100px;
+  font-weight: bold;
+  margin-top: 67px;
+}
+
+.main-text > .wrap-i {
+  position: relative;
+  top: -15px;
+}
+
+.main-text p {
+  position: relative;
+  left: 6px;
+  font-size: 32.5px;
+  font-weight: 550;
+}
+
+.main-text > .wrap-i img {
+  position: relative;
+  top: -17px;
+  left: 315px;
+}
+
+.congrats {
+  position: absolute;
+  top: 470px;
+  left: 170px;
+  width: 70vw;
+  line-height: 3.5em;
+}
+
+.congrats p {
+  font-size: 50px;
+}
+
+.cta .wrap-i {
+  position: absolute;
+  top: calc(100% - 263px);
+  right: calc(15% + 35px);
+}
+
+.cta p {
+  font-size: 70px;
+  overflow: none;
+}
+
+.cta p:nth-child(2) {
+  position: relative;
+  top: calc(-70px - 0.35em);
+  left: 12.73em;
+}
+
+/* Buttons */
+.navBtns {
+  position: absolute;
+  bottom: calc(170px - 7%);
+  right: calc(15% + 60px);
+  height: 7%;
+  width: calc(42.5vw + 1rem);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navBtns a:nth-child(odd) button{
+  color: var(--secondary);
+  background: var(--primary);
+}
+
+.navBtns a:nth-child(even) button{
+  color: var(--primary);
+  background: var(--secondary);
+}
+
+/* .navBtns a:nth-child(even) button p{
+  top: 5px;
+} */
+
+.navBtns a:nth-child(1) {
+  flex: 39;
+}
+
+.navBtns a:nth-child(2) {
+  flex: 61;
+}
+
+.navBtns a:nth-child(3) {
+  flex: 71;
+}
+
+.navBtns a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.navBtns button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 2vw;
+  outline: none;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.navBtns button span {
+  display: block;
+  flex: 1;
+  font-size: 3vw;
+  text-align: center;
+  margin: auto;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.navBtns button p {
+  position: relative;
+  flex: 5;
+  text-align: left;
+  letter-spacing: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* disabling optional decoration for medium and small screens */
+.aesPack1 {
+  display: none;
+}
+
+/* Optional decoration for larger screens */
+@media screen and (min-width: 1750px) {
+  .aesPack1 {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 98px;
+  }
+}
