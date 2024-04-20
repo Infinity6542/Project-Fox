@@ -1,0 +1,5 @@
+{
+    "redirects": [
+      { "source": "/loop.html", "destination": "/loops.html", "permanent": false }
+    ]
+  }
