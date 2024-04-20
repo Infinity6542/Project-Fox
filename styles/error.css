@@ -82,7 +82,7 @@
 /* Buttons */
 .navBtns {
   position: absolute;
-  bottom: calc(170px - 9%);
+  bottom: calc(170px - 7.5%);
   right: calc(15% + 60px);
   height: 7%;
   width: calc(42.5vw + 1rem);
