@@ -30,6 +30,7 @@
   font-size: 100px;
   font-weight: bold;
   margin-top: 67px;
+  left: 2px;
 }
 
 .main-text > .wrap-i {
@@ -39,7 +40,6 @@
 
 .main-text p {
   position: relative;
-  left: 6px;
   font-size: 32.5px;
   font-weight: 550;
 }
@@ -47,7 +47,7 @@
 .main-text > .wrap-i img {
   position: relative;
   top: -17px;
-  left: 315px;
+  left: 302px;
 }
 
 .congrats {
@@ -64,8 +64,8 @@
 
 .cta .wrap-i {
   position: absolute;
-  top: calc(100% - 263px);
-  right: calc(15% + 35px);
+  top: calc(100% - 272px);
+  right: calc(15% + 25px);
 }
 
 .cta p {
@@ -76,13 +76,13 @@
 .cta p:nth-child(2) {
   position: relative;
   top: calc(-70px - 0.35em);
-  left: 12.73em;
+  left: 12.45em;
 }
 
 /* Buttons */
 .navBtns {
   position: absolute;
-  bottom: calc(170px - 7%);
+  bottom: calc(170px - 9%);
   right: calc(15% + 60px);
   height: 7%;
   width: calc(42.5vw + 1rem);
