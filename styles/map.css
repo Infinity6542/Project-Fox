@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hub__wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .hub {
+    position: relative;
+    width: 4050px;
+    height: 4125px;
+
+    .hub__inner-wrapper {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+    img {
+      width: 100%;
+    }
+    #light__off {
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mini-map {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 350px;
+    height: 370px;
+    z-index: 20000;
+    border-radius: 12px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    background: url("/assets/map_1@4x.png") top left no-repeat;
+    background-size: cover;
+  }
+  .mini-map-marker {
+    position: absolute;
+    border: 2px solid #fff;
+  }
+}
+
+.mainMap {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: none; */
+}
