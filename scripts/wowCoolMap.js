@@ -50,3 +50,9 @@ gsap.set(bigImage, {
 });
 bigDraggable.update();
 alignSmall();
+
+window.onload = () => {
+  delay(5500).then(() => {
+    document.querySelector(".preloader").style.display = "none";
+  })
+}
