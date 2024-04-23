@@ -115,11 +115,10 @@ header > nav .logo img {
 }
 
 .station {
-  --size: 40px;
+  --size: 50px;
   position: relative;
   height: var(--size);
   width: var(--size);
-  /* background: transparent; */
   border: 8px var(--accent) solid;
   border-radius: 50%;
 }
