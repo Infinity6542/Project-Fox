@@ -52,6 +52,7 @@ bigDraggable.update();
 alignSmall();
 
 window.onload = () => {
+  document.querySelector("p").innerHTML = "rendering";
   delay(5500).then(() => {
     let e = document.querySelector(".preloader");
     e.style.opacity = "0";
