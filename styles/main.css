@@ -192,6 +192,10 @@ header > nav .logo img {
   color: var(--text);
 }
 
+.preloader {
+  transition: opacity .6s ease-out;
+}
+
 .preloader > .container {
   --uib-size: 100;
   --uib-color: var(--text);

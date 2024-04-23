@@ -53,6 +53,10 @@ alignSmall();
 
 window.onload = () => {
   delay(5500).then(() => {
-    document.querySelector(".preloader").style.display = "none";
+    let e = document.querySelector(".preloader");
+    e.style.opacity = "0";
+    delay(1000).then(() => {
+      e.style.display = "none";
+    })
   })
 }
