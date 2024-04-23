@@ -59,5 +59,5 @@ window.onload = () => {
       e.style.display = "none";
     })
   })
-  bigImage.style.transform = "translate3d(29.9444px, 139.352px, 0px);"
+  bigImage.style.transform = "translate3d(29.9444px, 139.352px, 0px);";
 }
