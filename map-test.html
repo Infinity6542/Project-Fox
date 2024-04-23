@@ -51,7 +51,10 @@
   </head>
   <body>
     <div class="preloader">
-      <div class="container"><div class="line"></div><p>loading</p></div>
+      <div class="container">
+        <div class="line"></div>
+        <p>loading</p>
+      </div>
     </div>
     <section class="hub__wrapper mainMap">
       <div id="miniMap" class="position-fixed mini-map">
@@ -66,13 +69,48 @@
             class="navBtn projectFox"
             onclick="alert('wow a message');"
           ></div>
-          <div class="navBtn about"></div>
-          <div class="navBtn _4xx"></div>
-          <div class="navBtn instructions"></div>
-          <div class="navBtn dash"></div>
-          <div class="navBtn achievements"></div>
-          <div class="navBtn end"></div>
-          <div class="navBtn credit"></div>
+          <a
+            href="./about.html"
+            aria-label="Link to the about page. Learn something new about Project Fox, and maybe even something about its parent - Operation Boxed."
+          >
+            <div class="navBtn about"></div>
+          </a>
+          <a
+            href="./learn.html"
+            aria-label="Link to the learning page. Learn more about th4 4XX HTTP Response codes I've been rambling on about..."
+          >
+            <div class="navBtn _4xx"></div>
+          </a>
+          <a
+            href="./instructions.html"
+            aria-label="Link to the instructions page. Learn how the game works, and how to play it!"
+          >
+            <div class="navBtn instructions"></div>
+          </a>
+          <a
+            href="./validation.html?target=dashboard"
+            aria-label="Link to the dashboard."
+          >
+            <div class="navBtn dash"></div>
+          </a>
+          <a
+            href="./validation.html?target=achievements"
+            aria-label="Link to view your achievements. If you have any, that is."
+          >
+            <div class="navBtn achievements"></div>
+          </a>
+          <a
+            href="./validation.html?target=end"
+            aria-label="Link to the end of the game."
+          >
+            <div class="navBtn end"></div>
+          </a>
+          <a
+            href="./credits.html"
+            aria-label="Link to the credits page. (And some bonus content if you've completed the game!)"
+          >
+            <div class="navBtn credit"></div>
+          </a>
         </div>
       </div>
     </section>

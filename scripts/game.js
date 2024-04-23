@@ -172,6 +172,9 @@ if (!loadNo) {
   init("tooManyRequests", "429", "f");
   init("requestHeaderFieldsTooLarge", "431", "f");
   init("unavailableForLegalReasons", "451", "f");
+  localStorage.setItem("dashboard", "locked");
+  localStorage.setItem("achievements", "locked");
+  localStorage.setItem("end", "locked");
   localStorage.setItem("firstLoad", "-1");
 } else {
   let achievements = [
@@ -241,6 +244,7 @@ function set(checkbox) {
       localStorage.setItem(checkbox.id, "t");
       checkbox.parentElement.classList.remove("incomplete");
       checkbox.parentElement.classList.add("complete");
+      localStorage.setItem("achieved", "true");
     } catch (e) {
       console.error("[ERR] [CACHE] " + e);
     }

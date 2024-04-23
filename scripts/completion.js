@@ -27,6 +27,7 @@ if (localStorage.getItem(code) === "t") {
     err +
     ")" +
     " HTTP response code.";
+  localStorage.setItem("achieved", "true");
 } else {
   console.error(
     "[ERR] [CORE] [CRIT] Invalid state for response " +
