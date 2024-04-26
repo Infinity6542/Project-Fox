@@ -45,7 +45,8 @@ body {
     border-radius: 12px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
     border: 1px solid black;
-    background: url("/assets/map_1@4x.png") top left no-repeat;
+    background: top left no-repeat;
+    background-image: url("/assets/map_1@4x.png");
     background-size: cover;
   }
   .mini-map-marker {
