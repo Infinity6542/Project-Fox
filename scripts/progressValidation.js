@@ -3,7 +3,7 @@ const t = a.get("target")
 console.log("[CORE] [XXXX] Attempting to validate...");
 console.info("[CORE] [VALI] Attempting to validate " + t + ".");
 if (localStorage.getItem(t) === "unlocked") {
-  window.location.href = "./" + t;
+  window.location.href = "./" + t + ".html";
 } else if ((t === "achievements") && (localStorage.getItem("achieved") === "true")) {
     localStorage.setItem("achievements", "unlocked");
     window.location.href = "./achievements.html";
