@@ -52,6 +52,23 @@ bigDraggable.update();
 alignSmall();
 
 window.onload = () => {
+  var map = document.getElementById("light__off");
+  var miniMap = document.querySelector(".mini-map")
+  if (localStorage.getItem("end") === "t") {
+    var src = "assets/map_6@2x.png";
+    map.src = src;
+    miniMap.style.backgroundImage = "url(/" + src + ")";
+  } else if (localStorage.getItem("achieved") === "true") {
+    var src = "assets/map_5@2x.png";
+    map.src = src;
+    miniMap.style.backgroundImage = "url(/" + src + ")";
+  } else if (localStorage.getItem("dashboard") === "t") {
+    var src = "assets/map_2@2x.png";
+    map.src = src;
+    miniMap.style.backgroundImage = "url(/" + src + ")";
+  } else {
+    console.log("Starting out? Thanks for playing :)");
+  }
   document.querySelector("p").innerHTML = "rendering";
   delay(5500).then(() => {
     let e = document.querySelector(".preloader");
