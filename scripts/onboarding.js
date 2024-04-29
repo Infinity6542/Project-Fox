@@ -1,9 +1,10 @@
-const a = new URLSearchParams(window.location.search);
-const t = a.get("onboarding");
+let a = new URLSearchParams(window.location.search);
+let t = a.get("onboarding");
 
-console.log(t);
-if (t === true) {
-    console.log("Sey");
+if (t === "true") {
+    t = true;
 } else {
-    console.log("On");
+    t = false;
 }
+
+console.log(typeof t);
