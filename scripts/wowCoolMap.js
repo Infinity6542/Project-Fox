@@ -1,19 +1,19 @@
 let bigImage = document.querySelector(".hub"),
-    smallImage = document.querySelector("#miniMap"),
-    marker = document.querySelector("#mapMarker"),
-    smallX = gsap.quickSetter(marker, "x", "px"),
-    smallY = gsap.quickSetter(marker, "y", "px"),
-    bigX = gsap.quickSetter(bigImage, "x", "px"),
-    bigY = gsap.quickSetter(bigImage, "y", "px"),
-    imageScale;
+  smallImage = document.querySelector("#miniMap"),
+  marker = document.querySelector("#mapMarker"),
+  smallX = gsap.quickSetter(marker, "x", "px"),
+  smallY = gsap.quickSetter(marker, "y", "px"),
+  bigX = gsap.quickSetter(bigImage, "x", "px"),
+  bigY = gsap.quickSetter(bigImage, "y", "px"),
+  imageScale;
 
 function setupSizing() {
   imageScale = smallImage.offsetWidth / bigImage.offsetWidth;
   let screenToBigRatio = window.innerWidth / bigImage.offsetWidth,
-      aspectRatio = window.innerWidth / window.innerHeight;
+    aspectRatio = window.innerWidth / window.innerHeight;
   gsap.set(marker, {
-    width: screenToBigRatio * smallImage.offsetWidth, 
-    height: screenToBigRatio * smallImage.offsetWidth / aspectRatio
+    width: screenToBigRatio * smallImage.offsetWidth,
+    height: (screenToBigRatio * smallImage.offsetWidth) / aspectRatio,
   });
 }
 setupSizing();
@@ -46,14 +46,14 @@ function alignBig() {
 // align center initially
 gsap.set(bigImage, {
   x: (bigDraggable.minX + bigDraggable.maxX) / 2,
-  y: (bigDraggable.minY + bigDraggable.maxY) / 2
+  y: (bigDraggable.minY + bigDraggable.maxY) / 2,
 });
 bigDraggable.update();
 alignSmall();
 
 window.onload = () => {
   var map = document.getElementById("light__off");
-  var miniMap = document.querySelector(".mini-map")
+  var miniMap = document.querySelector(".mini-map");
   if (localStorage.getItem("end") === "t") {
     var src = "assets/map_6@2x.png";
     map.src = src;
@@ -75,7 +75,7 @@ window.onload = () => {
     e.style.opacity = "0";
     delay(1000).then(() => {
       e.style.display = "none";
-    })
-  })
+    });
+  });
   bigImage.style.transform = "translate3d(29.9444px, 139.352px, 0px);";
-}
+};
