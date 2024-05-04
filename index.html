@@ -49,15 +49,16 @@
     ></script>
     <!--End GSAP plugin import-->
     <!--Liking Google Icons (Material Icons)-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <!--End linking Material Icons-->
     <script src="/scripts/index.js" defer></script>
     <script src="/scripts/onboarding.js" defer></script>
-    <script src="/scripts/wowCoolMap.js" defer></script>
 
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="stylesheet" href="styles/map.css" />
   </head>
   <header>
     <nav>
@@ -77,6 +78,19 @@
   <body>
     <!--*Exists for space optimisation-->
     <!-- <div class="ruleofthirds"></div> -->
+    <a href="./map-test.html?onboarding=true" aria-label="Go to the map page.">
+      <div class="sonner">
+        <div class="wrap-i">
+          <div class="text">
+            <h2><i>*mysterious sound*</i></h2>
+            <p>Something compels you to<br />click on this button...</p>
+          </div>
+          <button>
+            <span class="material-symbols-outlined"> arrow_downward </span>
+          </button>
+        </div>
+      </div>
+    </a>
     <section class="hero">
       <div class="heroContent">
         <!--Trying something new for once-->
@@ -87,17 +101,9 @@
         <div class="empty"></div>
       </div>
     </section>
-    <div class="sonner" id="onboarding" onclick="alert('Hmmm... No work :(. Not yet at least...')">
-      <div class="wrap-i">
-        <div class="text">
-          <h2>Hey there!</h2>
-          <p>Button! Click click! But what do I do?</p>
-        </div>
-        <button>
-          <span class="material-symbols-outlined"> arrow_downward </span>
-        </button>
-      </div>
-    </div>
+    <section class="cta">
+      
+    </section>
   </body>
   <footer></footer>
 </html>

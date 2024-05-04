@@ -21,6 +21,7 @@
   --accent: #f39336;
   --primary: #e1ae9b;
   --secondary: #982d09;
+  --tertiary: #d1a94e;
   --yes: #43c56c;
   --no: #b12b14;
   --highlight: #3a312f;
@@ -64,7 +65,7 @@ body h1 {
 .slider {
   --size: 40px;
   position: relative;
-  right: -32px;
+  right: -40px;
   height: var(--size);
   width: var(--size);
   background: white;
@@ -73,7 +74,7 @@ body h1 {
 }
 
 .on {
-  right: 15px;
+  right: 10px;
 }
 
 .toggle p {
@@ -115,11 +116,10 @@ header > nav .logo img {
 }
 
 .station {
-  --size: 40px;
+  --size: 50px;
   position: relative;
   height: var(--size);
   width: var(--size);
-  /* background: transparent; */
   border: 8px var(--accent) solid;
   border-radius: 50%;
 }
@@ -191,4 +191,191 @@ header > nav .logo img {
 .sonner button span {
   font-size: 50px;
   color: var(--text);
+}
+
+.preloader {
+  transition: opacity .6s ease-out;
+}
+
+.preloader > .container {
+  --uib-size: 100;
+  --uib-color: var(--text);
+  --uib-speed: 3.5s;
+  --uib-stroke: 12;
+  --uib-mult: calc(var(--uib-size) / var(--uib-stroke));
+  --uib-stroke-px: calc(var(--uib-stroke) * 1px);
+  --uib-size-px: calc(var(--uib-size) * 1px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: var(--uib-size-px);
+  width: var(--uib-size-px);
+  z-index: 99999999999999;
+}
+
+.preloader .line {
+  position: absolute;
+  top: calc(50% - var(--uib-stroke-px) / 2);
+  left: calc(50% - var(--uib-stroke-px) / 2);
+  width: var(--uib-stroke-px);
+  height: var(--uib-stroke-px);
+  background-color: var(--uib-color);
+  animation: center-line var(--uib-speed) ease infinite;
+  transition: background-color 0.3s ease;
+  z-index: 99999999999999;
+}
+
+.preloader > .container::before,
+.preloader > .container::after {
+  content: "";
+  position: absolute;
+  width: var(--uib-stroke-px);
+  height: var(--uib-stroke-px);
+  background-color: var(--uib-color);
+  animation: explore var(--uib-speed) ease infinite;
+  transition: background-color 0.3s ease;
+  z-index: 99999999999999;
+}
+
+.preloader > .container::after {
+  animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.preloader > .container p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(3 * (var(--uib-stroke-px) / 2) + 3 * var(--uib-stroke-px) + 80%);
+  left: 50%;
+  font-size: 2.1em;
+  font-weight: 500;
+}
+
+@keyframes center-line {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  12.5%,
+  62.5% {
+    transform: scaleX(var(--uib-mult)) scaleY(1);
+  }
+  37.5%,
+  87.5% {
+    transform: scaleX(1) scaleY(var(--uib-mult));
+  }
+}
+
+@keyframes explore {
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+
+  12.5% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+
+  12.50001% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: top right;
+    top: 0;
+    left: initial;
+    right: 0;
+  }
+
+  25% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: top right;
+    top: 0;
+    left: initial;
+    right: 0;
+  }
+
+  37.5% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: top right;
+    top: 0;
+    left: initial;
+    right: 0;
+  }
+
+  37.5001% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: bottom right;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
+
+  50% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom right;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
+
+  62.5% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom right;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
+
+  62.5001% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom left;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+
+  75% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom left;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+
+  87.5% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: bottom left;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+
+  87.5001% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+}
+
+.preloader {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: none;
+  background: var(--bg);
+  z-index: 9999999999999;
 }

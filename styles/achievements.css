@@ -11,6 +11,11 @@ input[type="checkbox"] {
     display: none;
 }
 
+label {
+    user-select: none;
+    display: none;
+}
+
 body {
     position: absolute;
     top: 98px !important;

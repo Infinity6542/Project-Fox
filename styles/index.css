@@ -17,6 +17,7 @@
   grid-column: 2;
   grid-row: 3;
   z-index: 3;
+  left: -6px;
 }
 
 #heroTxt {
@@ -66,4 +67,9 @@
 
 #onboarding {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text) !important;
 }

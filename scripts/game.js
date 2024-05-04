@@ -172,6 +172,9 @@ if (!loadNo) {
   init("tooManyRequests", "429", "f");
   init("requestHeaderFieldsTooLarge", "431", "f");
   init("unavailableForLegalReasons", "451", "f");
+  localStorage.setItem("dashboard", "locked");
+  localStorage.setItem("achievements", "locked");
+  localStorage.setItem("end", "locked");
   localStorage.setItem("firstLoad", "-1");
 } else {
   let achievements = [
@@ -221,26 +224,13 @@ function init(name, code, status) {
   );
 }
 
-function clear() {
-  console.log("[LOGS] [PURG] [CACHE] Clearing cache...");
-  localStorage.clear();
-  console.log("[LOGS] [PURG] [CACHE] Cache successfully cleared.");
-  console.log("[LOGS] [PURG] Clearing checkboxes...");
-  let inputs = document.querySelectorAll('input[type="checkbox"]');
-  for (let i = 0; i < inputs.length; i++) {
-    inputs[i].checked = false;
-  }
-  console.log("[LOGS] [PURG] Checkboxes successfully cleared.");
-  console.log("[LOGS] [PURG] Reloading page to apply changes...");
-  location.reload();
-}
-
 function set(checkbox) {
   if (checkbox.checked === true) {
     try {
       localStorage.setItem(checkbox.id, "t");
       checkbox.parentElement.classList.remove("incomplete");
       checkbox.parentElement.classList.add("complete");
+      localStorage.setItem("achieved", "true");
     } catch (e) {
       console.error("[ERR] [CACHE] " + e);
     }

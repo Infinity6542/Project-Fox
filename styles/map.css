@@ -1,0 +1,277 @@
+/* credit to Jack at GreenSock (GSAP) for the following code */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hub__wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .hub {
+    position: relative;
+    width: 4050px;
+    height: 4125px;
+
+    .hub__inner-wrapper {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+    img {
+      width: 100%;
+    }
+    #light__off {
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mini-map {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 350px;
+    height: 370px;
+    z-index: 5000;
+    border-radius: 12px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    background: top left no-repeat;
+    background-image: url("/assets/map_1@4x.png");
+    background-size: cover;
+  }
+  .mini-map-marker {
+    position: absolute;
+    border: 2px solid #fff;
+  }
+}
+
+/* the following code is my own */
+/* buttons */
+.navBtn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+.projectFox {
+  top: 49%;
+  left: 18%;
+  width: 900px;
+  height: 300px;
+  background: transparent;
+  transform: rotate(-23deg);
+  cursor: pointer;
+}
+
+.about {
+  top: 63%;
+  left: 29%;
+  width: 1500px;
+  height: 250px;
+  background: transparent;
+  cursor: pointer;
+}
+
+._4xx {
+  top: 88%;
+  left: 47%;
+  width: 1400px;
+  height: 400px;
+  background: transparent;
+  transform: rotate(-20deg);
+  cursor: pointer;
+}
+
+.instructions {
+  top: 63%;
+  left: 72%;
+  width: 1400px;
+  height: 250px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dash {
+  top: 45%;
+  left: 50%;
+  width: 1400px;
+  height: 400px;
+  background: transparent;
+  transform: rotate(20deg);
+  cursor: pointer;
+  border-radius: 25%;
+}
+
+.achievements {
+  top: 12%;
+  left: 70%;
+  width: 1000px;
+  height: 450px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.end {
+  top: 32.5%;
+  left: 50%;
+  width: 1200px;
+  height: 470px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.credit {
+  top: 12%;
+  left: 37%;
+  width: 1400px;
+  height: 450px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* onboarding */
+.onboarding__wrapper {
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  height: 20vh;
+  width: 40vw;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0px 0px 5px var(--secondary); */
+  animation: shadowRgbVomit 5s infinite linear;
+  display: none;
+  opacity: 0;
+}
+
+@keyframes shadowRgbVomit {
+  0% {
+    box-shadow: 0px 0px 5px var(--primary);
+  }
+
+  25% {
+    box-shadow: 0px 0px 5px var(--accent);
+  }
+
+  50% {
+    box-shadow: 0px 0px 5px var(--secondary);
+  }
+
+  75% {
+    box-shadow: 0px 0px 5px var(--tertiary);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5px var(--primary);
+  }
+}
+
+@keyframes outlineRgbVomit {
+  0% {
+    outline: 5px solid var(--primary);
+  }
+
+  25% {
+    outline: 5px solid var(--accent);
+  }
+
+  50% {
+    outline: 5px solid var(--secondary);
+  }
+
+  75% {
+    outline: 5px solid var(--tertiary);
+  }
+
+  100% {
+    outline: 5px solid var(--primary);
+  }
+}
+
+.onboarding__container {
+  height: 100%;
+}
+
+.onboard__centre {
+  height: 100%;
+}
+
+.onboard__centre > .wrap-i {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-i > .btn {
+  width: 100%;
+  margin-top: auto;
+  button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: difference;
+    outline: none;
+    pointer-events: all;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+}
+
+.onboard__centre h1 {
+  background: transparent;
+}
+
+/* .dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background: rgb(20, 18, 18);
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+} */
+
+.highlight {
+  position: fixed;
+  top: 27%;
+  left: 50%;
+  height: 250px;
+  width: 99vw;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  animation: outlineRgbVomit 5s infinite linear;
+}
+
+#title {
+text-align: center;
+}
+
+#textbox {
+text-align: center;
+}
