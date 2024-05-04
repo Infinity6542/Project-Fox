@@ -1,3 +1,16 @@
+window.onload = () => {
+  let div = document.querySelector(".sonner")
+  let a = localStorage.getItem("onboardComplete");
+  if (a == "true") {
+    div.style.display = "none";
+  } else if (a == null) {
+    div.style.display = "inline";
+  } else {
+    console.log("[ERR] [DECT] An error occurred while trying to determine the value of onboardComplete.");
+    console.error("[CRIT] [ERRO] Was unable to complete onboarding detection due to an invalid value.");
+  }
+}
+
 gsap.fromTo(
   ".heroContent > .station",
   {

@@ -138,3 +138,140 @@ body {
   background: transparent;
   cursor: pointer;
 }
+
+/* onboarding */
+.onboarding__wrapper {
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  height: 20vh;
+  width: 40vw;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0px 0px 5px var(--secondary); */
+  animation: shadowRgbVomit 5s infinite linear;
+  display: none;
+  opacity: 0;
+}
+
+@keyframes shadowRgbVomit {
+  0% {
+    box-shadow: 0px 0px 5px var(--primary);
+  }
+
+  25% {
+    box-shadow: 0px 0px 5px var(--accent);
+  }
+
+  50% {
+    box-shadow: 0px 0px 5px var(--secondary);
+  }
+
+  75% {
+    box-shadow: 0px 0px 5px var(--tertiary);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5px var(--primary);
+  }
+}
+
+@keyframes outlineRgbVomit {
+  0% {
+    outline: 5px solid var(--primary);
+  }
+
+  25% {
+    outline: 5px solid var(--accent);
+  }
+
+  50% {
+    outline: 5px solid var(--secondary);
+  }
+
+  75% {
+    outline: 5px solid var(--tertiary);
+  }
+
+  100% {
+    outline: 5px solid var(--primary);
+  }
+}
+
+.onboarding__container {
+  height: 100%;
+}
+
+.onboard__centre {
+  height: 100%;
+}
+
+.onboard__centre > .wrap-i {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-i > .btn {
+  width: 100%;
+  margin-top: auto;
+  button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: difference;
+    outline: none;
+    pointer-events: all;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+}
+
+.onboard__centre h1 {
+  background: transparent;
+}
+
+/* .dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background: rgb(20, 18, 18);
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+} */
+
+.highlight {
+  position: fixed;
+  top: 27%;
+  left: 50%;
+  height: 250px;
+  width: 99vw;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  animation: outlineRgbVomit 5s infinite linear;
+}
+
+#title {
+text-align: center;
+}
+
+#textbox {
+text-align: center;
+}
