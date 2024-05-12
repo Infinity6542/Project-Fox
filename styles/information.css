@@ -1,0 +1,401 @@
+/* prelim */
+.status {
+  background: var(--yes);
+}
+
+/* hero */
+.hero {
+  position: relative;
+  top: 98px;
+  left: 0;
+  height: calc(100vh - 98px);
+  width: 100vw;
+}
+
+.hero::before {
+  content: url(/assets/mainDec_1.svg);
+  position: absolute;
+  width: 0;
+  left: 20px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero::after {
+  --size: 130vh;
+  content: "";
+  position: absolute;
+  top: -50vh;
+  left: -40vh;
+  height: var(--size);
+  width: var(--size);
+  background: radial-gradient(rgba(147, 47, 14, 0.7), var(--bg));
+  border-radius: 50%;
+  filter: blur(10em);
+  z-index: -1;
+}
+
+.back {
+  position: absolute;
+  left: 65px;
+  top: 120px;
+  height: 35px;
+  width: 100px;
+}
+
+.back p,
+.back span {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: hsl(15, 83%, 32%);
+}
+
+.back p {
+  position: relative;
+  bottom: 1px;
+}
+
+.back .material-symbols-outlined {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+/* content */
+.content {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding-left: 172px;
+}
+
+.content::before {
+  position: relative;
+  content: "";
+  width: 10px;
+  height: 135%;
+  background: var(--accent);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.content p {
+  width: 55vw;
+  font-size: 1.1rem;
+}
+
+.content p a {
+  color: var(--text);
+}
+
+.content .overview p {
+  margin-bottom: 5em;
+}
+
+.content .wrap-i {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: -2;
+}
+
+.content h1 {
+  font-size: 3.5em;
+}
+
+/* .overview::before {
+  content: '';
+  position: relative;
+  top: 65px;
+  right: 70px;
+  height: 40px;
+  width: 30px;
+  background: var(--bg);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.overview::after {
+  content: '';
+  position: relative;
+  top: -205px;
+  right: 67px;
+  height: 50px;
+  width: 50px;
+  background-image: url(/assets/eye.svg);
+  background-repeat: no-repeat;
+  object-fit: fill;
+  display: inline-block;
+  border-radius: 50%;
+} */
+
+.title {
+  position: relative;
+  top: 190px;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title > h1 {
+  top: 1.3em;
+  font-family: FiraCode;
+  font-weight: 400;
+  background: transparent;
+}
+
+.title h2 {
+  font-size: 5em;
+}
+
+.title .est h3,
+.title .est p {
+  font-family: FiraCode;
+}
+
+.title .est h3 {
+  font-size: 1.3rem;
+  font-weight: 450;
+}
+
+.title .est p {
+  position: relative;
+  top: -0.3em;
+  font-size: 1rem;
+  font-weight: 350;
+}
+
+.title .est,
+.title > h1 {
+  position: relative;
+  left: 0.3em;
+}
+
+.cta {
+  z-index: 2;
+}
+
+/* decoration */
+.decoration {
+  position: absolute;
+  height: 80vh;
+  width: auto;
+  top: calc(10vh - (98px / 2));
+  z-index: 1;
+}
+
+/* .path {
+  position: absolute;
+  top: calc(10vh - (98px / 2) + 8.7vh);
+  right: -9vw;
+  height: 62.75vh;
+  width: 15vw;
+}
+
+.driver {
+  content: url(/assets/driver.svg);
+  animation-name: moveOnPath;
+  offset-distance: -9%;
+}
+
+.carriage {
+  content: url(/assets/carriage.svg);
+  animation-name: moveOnPath2;
+  offset-distance: -20%;
+}
+
+.carriage2 {
+  content: url(/assets/carriage.svg);
+  animation-name: moveOnPath3;
+  offset-distance: -31%;
+}
+
+.decElAnim {
+  position: absolute;
+  offset-path: inset(0 0 0 -3px);
+  transform: rotate(270deg);
+  height: 100px;
+  left: calc(100vw - 87px);
+  z-index: 3;
+  top: calc(10vh - (98px / 2) - 30px);
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+} */
+
+.stop {
+  position: absolute;
+  height: 40px;
+  width: 20px;
+  background: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stop1 {
+  top: 28px;
+  left: 167px;
+}
+
+.stop2 {
+  top: 313px;
+  left: 167px;
+}
+
+.stop2 img {
+  height: 27px;
+  width: 27px;
+  color: var(--text);
+}
+
+/* external navigation */
+.ex-nav {
+  position: fixed;
+  right: 7vw;
+  top: calc(50% + 49px);
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  opacity: 0;
+}
+
+.ex-nav h2 {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: FiraCode;
+  margin-bottom: 15px;
+}
+
+.ex-nav ul {
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.ex-nav ul li {
+  margin-bottom: 5px;
+}
+
+.ex-nav ul li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 450;
+}
+
+.ex-nav ul li a:hover {
+  opacity: 80%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ex-nav .inactive {
+  opacity: 30%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+  opacity: 100%;
+}
+
+/* active item/guide */
+.guide {
+  position: relative;
+  height: 250px;
+  width: 500px;
+  border-radius: 20px;
+  background: linear-gradient(315deg, #180902, #140702);
+  box-shadow: -26px -26px 52px #000000, 26px 26px 52px #2b1004;
+  z-index: 1;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.guide::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 500px;
+  background: linear-gradient(90deg, #e1ae9b, #f39336, #982d09);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide p {
+  width: 90%;
+}
+
+.slide .overline {
+  margin-top: 30px;
+}
+
+.slide h3 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+  bottom: 7px;
+}
+
+.slide button {
+  height: 30px;
+  border-radius: 28px;
+}
+
+.grp-btn {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.slide .grp-btn .altBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+}
+
+.slide .grp-btn .primBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  gap: 10px;
+}
+
+.slide .grp-btn button {
+  font-weight: 500;
+  cursor:pointer;
+}
+
+.slide .grp-btn .primBtn span {
+  top: 2.5em;
+  font-size: .8rem;
+}
+
+.slide {
+  opacity: 0;
+  display: none;
+}
+
+/* TODO: this will be applied in JS */
+.slide[data-index="1"] {
+  opacity: 1;
+  display: inline-flex;
+}

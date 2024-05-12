@@ -161,6 +161,12 @@
   display: none;
 }
 
+/* button hover effects */
+/* a:hover ~ a button {
+  opacity: 0;
+  transition: .5s ease-in-out;
+} */
+
 /* Optional decoration for larger screens */
 @media screen and (min-width: 1750px) {
   .aesPack1 {

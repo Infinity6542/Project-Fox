@@ -15,6 +15,11 @@
   src: url(/styles/fonts/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: FiraCode;
+  src: url(/styles/fonts/Fira/firaCode-var.ttf);
+}
+
 :root {
   --bg: #160802;
   --text: #fbe1da;
@@ -34,6 +39,7 @@
 }
 
 body {
+  height: 200vh;
   width: 100vw;
   overflow-x: hidden;
   background: var(--bg);
@@ -82,7 +88,7 @@ body h1 {
   display: none;
 }
 
-.active {
+#reduceMotion .active {
   background: var(--yes);
 }
 
@@ -97,6 +103,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
 }
 
 header > nav .logo img {
@@ -378,4 +385,127 @@ header > nav .logo img {
   padding: none;
   background: var(--bg);
   z-index: 9999999999999;
+}
+
+/* preset */
+button {
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+}
+
+a:has(button) {
+  text-decoration: none;
+  button {
+    cursor: pointer;
+  }
+}
+
+/* consistent */
+.overline {
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.rnd100 {
+  border-radius: 30px;
+}
+
+.rvs-btn {
+    background: var(--text);
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+  
+}
+
+.scn-rht {
+  right: 0;
+}
+
+@keyframes moveOnPath {
+  from {
+    offset-distance: -9%;
+  }
+  to {
+    offset-distance: 91%;
+  }
+}
+
+/* 
+@keyframes moveOnPath2 {
+  from {
+    offset-distance: -20%;
+  }
+  to {
+    offset-distance: 80%;
+  }
+}
+
+@keyframes moveOnPath3 {
+  from {
+    offset-distance: -31%;
+  }
+  to {
+    offset-distance: 69%;
+  }
+} */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.txt-lft {
+  text-align: left;
+}
+
+.txt-cntr {
+  text-align: center;
+}
+
+.txt-rht {
+  text-align: right;
+}
+
+.overline {
+  font-family: FiraCode;
+}
+
+.primBtn {
+  background: var(--text);
+  color:#3E1606;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.primBtn span {
+  margin-left: 0;
+}
+
+.altBtn {
+  background: #3E1606;
+  color: var(--text);
+}
+
+.btn {
+  min-width: fit-content;
+  flex-grow: 1;
+  cursor: pointer;
 }
