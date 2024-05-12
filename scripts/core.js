@@ -15,3 +15,11 @@ function clear() {
   console.log("[LOGS] [PURG] Reloading page to apply changes...");
   location.reload();
 }
+
+let prefersRedMo = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
+if (!!prefersRedMo) {
+  localStorage.setItem("prefersReducedMotion", "true");
+} else {
+  // do nothing
+}
