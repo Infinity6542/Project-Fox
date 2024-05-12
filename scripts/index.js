@@ -27,7 +27,7 @@ if (!!prefersRedMo) {
     ".heroContent > .station",
     {
       x: 250,
-      scale: 30,
+      scale: 20,
     },
     {
       x: 250,
@@ -68,3 +68,39 @@ if (!!prefersRedMo) {
     ease: "back.out",
   });
 }
+
+// Other animations
+gsap.registerPlugin(ScrollTrigger);
+delay(3500);
+let pre1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".preDrive",
+    start: "top top",
+    pin: true,
+    end: "+=600%",
+    scrub: 1,
+  },
+});
+
+pre1.addLabel("start")
+.to(".preDrive", { y: 400 }, "start")
+.addLabel("stage2")
+.to(".preDrive", { rotation: 60 }, "stage2")
+.addLabel("stage3")
+.from("#about h1[data-index='1']", { opacity: 0, yPercent: 50}, "stage3")
+.addLabel("text1")
+.to("#about h1[data-index='1']", { opacity: 0, yPercent: -100}, "text1")
+.from("#about h1[data-index='2']", { opacity: 0, yPercent: 50}, "text1")
+.addLabel("text2")
+.to(".preDrive", { y: -200 }, "text2")
+.to("#about h1[data-index='2']", { opacity: 0, yPercent: -100}, "text2")
+.from("#about h1[data-index='3']", { opacity: 0, yPercent: 50}, "text2")
+.addLabel("text3")
+.to("#about h1[data-index='3']", { opacity: 0, yPercent: -100}, "text3")
+.from("#about h1[data-index='4']", { opacity: 0, yPercent: 50}, "text3")
+.addLabel("text4")
+.to("#about h1[data-index='4']", { opacity: 0, yPercent: -100}, "text4")
+.from("#about h1[data-index='5']", { opacity: 0, yPercent: 50}, "text4")
+.addLabel("text5")
+.to("#about h1[data-index='5']", { opacity: 0, yPercent: -100}, "text5")
+.from("#about h1[data-index='6']", { opacity: 0, yPercent: 50}, "text5")

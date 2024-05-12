@@ -61,7 +61,7 @@
     rgba(243, 147, 54, 1) 0%,
     rgba(243, 147, 54, 1) 33%,
     rgba(243, 147, 54, 1) 85%,
-    rgba(22, 8, 2, 1) 100%
+    var(--bg) 95%
   );
 }
 
@@ -72,4 +72,23 @@
 a {
   text-decoration: none;
   color: var(--text) !important;
+}
+
+/* pre anim */
+.preDrive {
+  position: absolute;
+  left: 30.6em;
+  z-index: 2;
+  top: -1em;
+}
+
+#about h1 {
+  position: fixed;
+  margin-left: 31em;
+  transform: translate(0, -50%);
+  top: 49%;
+}
+
+#about {
+  height: 300%;
 }

@@ -25,7 +25,7 @@ const deact = (el) => {
   delay(500);
   el.style.display = "none";
   el.ariaHidden = true;
-}
+};
 
 const act = (el) => {
   el.style.transition = "opacity .5s ease-in-out";
@@ -33,7 +33,7 @@ const act = (el) => {
   delay(500);
   el.style.display = "inline-flex";
   el.ariaHidden = false;
-}
+};
 
 function onboard(i) {
   let x = i - 1;
@@ -46,9 +46,13 @@ function completeOnboard() {
     localStorage.setItem("onboardComplete", "true");
     localStorage.setItem("dashboard", "unlocked");
     console.info("[INFO] [ONBO] Onboarding complete.");
-    window.alert("You've completed onboarding! Feel free to use the navigation menu on the right to continue...");
+    window.alert(
+      "You've completed onboarding! Feel free to use the navigation menu on the right to continue..."
+    );
   } catch (e) {
-    console.error("[ERRO] [CORE] Something went wrong when completing onboarding. Self-fixing...");
+    console.error(
+      "[ERRO] [CORE] Something went wrong when completing onboarding. Self-fixing..."
+    );
     localStorage.setItem("onboardComplete", "false");
     console.log("[XXXX] [XXXX] onboardComplete set to default value.");
   }
