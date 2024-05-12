@@ -44,8 +44,9 @@ function onboard(i) {
 function completeOnboard() {
   try {
     localStorage.setItem("onboardComplete", "true");
+    localStorage.setItem("dashboard", "unlocked");
     console.info("[INFO] [ONBO] Onboarding complete.");
-    window.alert("You've completed onboarding! Feel free to use the navigation menu on the right to continue...")
+    window.alert("You've completed onboarding! Feel free to use the navigation menu on the right to continue...");
   } catch (e) {
     console.error("[ERRO] [CORE] Something went wrong when completing onboarding. Self-fixing...");
     localStorage.setItem("onboardComplete", "false");

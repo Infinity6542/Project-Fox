@@ -54,7 +54,7 @@ alignSmall();
 window.onload = () => {
   var map = document.getElementById("light__off");
   var miniMap = document.querySelector(".mini-map");
-  if (localStorage.getItem("end") === "t") {
+  if (localStorage.getItem("end") === "unlocked") {
     var src = "assets/map_6@2x.png";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
@@ -62,7 +62,7 @@ window.onload = () => {
     var src = "assets/map_5@2x.png";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
-  } else if (localStorage.getItem("dashboard") === "t") {
+  } else if (localStorage.getItem("dashboard") === "unlocked") {
     var src = "assets/map_2@2x.png";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
