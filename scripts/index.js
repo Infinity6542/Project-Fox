@@ -103,4 +103,4 @@ pre1.addLabel("start")
 .from("#about h1[data-index='5']", { opacity: 0, yPercent: 50}, "text4")
 .addLabel("text5")
 .to("#about h1[data-index='5']", { opacity: 0, yPercent: -100}, "text5")
-.from("#about h1[data-index='6']", { opacity: 0, yPercent: 50}, "text5")
+.from("#about h1[data-index='6']", { opacity: 0, yPercent: 50}, "text5");
