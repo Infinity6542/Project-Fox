@@ -404,6 +404,10 @@ a:has(button) {
   }
 }
 
+/* body * {
+  overflow: hidden;
+} */
+
 /* consistent */
 .overline {
   font-size: 0.95rem;
@@ -508,4 +512,8 @@ a:has(button) {
   min-width: fit-content;
   flex-grow: 1;
   cursor: pointer;
+}
+
+.pad-l50 {
+  padding-left: 50px;
 }
