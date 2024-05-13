@@ -1,4 +1,6 @@
 /*! For license information please see editor-js.js.LICENSE.txt */
+// Not my property. Props to Mozilla for this.
+// This code is not actively used, although it may be in the future.
 "use strict";
 (self.webpackChunkinteractive_examples =
   self.webpackChunkinteractive_examples || []).push([

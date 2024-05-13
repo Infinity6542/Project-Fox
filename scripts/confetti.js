@@ -1,3 +1,5 @@
+
+// Credit to the original author of the confetti.js library.
 var duration = 15 * 300;
 var animationEnd = Date.now() + duration;
 var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };

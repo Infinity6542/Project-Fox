@@ -1,3 +1,4 @@
+
 let a = new URLSearchParams(window.location.search);
 let t = a.get("onboarding");
 bigImage = document.querySelector(".hub");

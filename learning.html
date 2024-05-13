@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -99,85 +99,366 @@
       <!-- <div class="nav-acc"></div> -->
     </nav>
   </header>
-  <!--©️Copyright 2024 James Chen. All rights reserved and automatically protected under the Copyrights Act 1968 of the Commonwealth of Australia, enforceable overseas via the same Act.-->
   <body>
-    <section class="hero">
-      <div class="back">
-        <a href="javascript:history.back()"
-          ><button type="button" class="rvs-btn rnd100">
-            <span class="material-symbols-outlined"> arrow_back </span>
-            <p>Back</p>
-          </button></a
-        >
-      </div>
-      <div class="title">
-        <h1 class="overline all-caps fnt-20">information</h1>
-        <h2 class="headline">4XX Status Codes</h2>
-        <div class="est">
-          <h3 class="all-caps">reading time</h3>
-          <p>7 minutes</p>
+    <div class="wrap-o">
+      <section class="hero">
+        <div class="back">
+          <a href="javascript:history.back()"
+            ><button type="button" class="rvs-btn rnd100">
+              <span class="material-symbols-outlined"> arrow_back </span>
+              <p>Back</p>
+            </button></a
+          >
         </div>
-      </div>
-      <img
-        src="/assets//trainntrackdec.png"
-        aria-hidden="true"
-        class="scn-rht decoration"
-        id="traintrackdec"
-      />
-    </section>
-    <section class="content">
-      <div class="wrap-i flex-row" style="z-index: 1">
-        <div class="overview" style="margin-bottom: 70px">
-          <div class="header1">
-            <div class="stop stop1">
-              <span class="material-symbols-outlined"> visibility </span>
+        <div class="title">
+          <h1 class="overline all-caps fnt-20">information</h1>
+          <h2 class="headline">4XX Status Codes</h2>
+          <div class="est">
+            <h3 class="all-caps">reading time</h3>
+            <p>7 minutes</p>
+          </div>
+        </div>
+        <img
+          src="/assets//trainntrackdec.png"
+          aria-hidden="true"
+          class="scn-rht decoration"
+          id="traintrackdec"
+        />
+      </section>
+      <section class="content">
+        <div class="wrap-i flex-row" style="z-index: 1">
+          <div class="overview" style="margin-bottom: 70px">
+            <div class="header1">
+              <div class="stop stop1">
+                <span class="material-symbols-outlined"> visibility </span>
+              </div>
+              <h1>Overview</h1>
             </div>
-            <h1>Overview</h1>
-          </div>
-          <div class="desc">
-            <p>
-              This section will teach you what the error codes are, as well as
-              the characteristics of each one. You will need to find these codes
-              in the game to progress. A reference to MDN Web Docs is provided
-              for deeper learning.
-            </p>
-          </div>
-        </div>
-        <div class="cta">
-          <div class="header1">
-            <div class="stop stop2">
-              <span class="material-symbols-outlined"
-                ><img
-                  src="/assets/cityrail.svg"
-                  alt="The old CityRail logo (superseded by Sydney Trains), indicating two slightly blurred arrows traveling in opposite directions."
-                  onclick="window.location.href = '/451.html'"
-              /></span>
+            <div class="desc">
+              <p>
+                This section will teach you what the error codes are, as well as
+                the characteristics of each one. You will need to find these
+                codes in the game to progress. A reference to MDN Web Docs is
+                provided for deeper learning.
+              </p>
             </div>
-            <h1>The Beginning of Something Big</h1>
           </div>
-          <div class="desc">
-            <p>
-              A big leap takes a little courage.<br />Begin your learning
-              journey today by reading a one-sentence summary of each 4XX HTTP
-              status code (client-side). There are, however, certain codes
-              omitted from the game, as I am unable to replicate them.
-            </p>
+          <div class="cta">
+            <div class="header1">
+              <div class="stop stop2">
+                <span class="material-symbols-outlined"
+                  ><img
+                    src="/assets/cityrail.svg"
+                    alt="The old CityRail logo (superseded by Sydney Trains), indicating two slightly blurred arrows traveling in opposite directions."
+                    onclick="window.location.href = '/451.html'"
+                /></span>
+              </div>
+              <h1>The Beginning of Something Big</h1>
+            </div>
+            <div class="desc">
+              <p>
+                A big leap takes a little courage.<br />Begin your learning
+                journey today by reading a one-sentence summary of each 4XX HTTP
+                status code (client-side). There are, however, certain codes
+                omitted from the game, as I am unable to replicate them.<br />
+                The below codes are the ones you will need to find in the game.
+              </p>
+              <div class="accordion">
+                <div class="accordionEl">
+                  <button type="button">400 - Bad Request</button>
+                  <p>
+                    The server cannot, or refuses to, process the client’s
+                    request due to an error made by the client.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">401 - Unauthorised</button>
+                  <p>
+                    The client is unauthorised to access the information or data
+                    requested.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">402 - Forbidden</button>
+                  <p>
+                    The client, although known to the server, is unauthorised to
+                    access the information or data requested.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">404 - Not Found</button>
+                  <p>
+                    The server could not locate the requested resource using the
+                    path provided by the client.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">405 - Method Not Allowed</button>
+                  <p>
+                    The request method is known to the server, but is not
+                    permitted by the same server.
+                    <br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">406 - Not Acceptable</button>
+                  <p>
+                    The server could not produce a response which complies with
+                    the acceptable values provided by the client, and is
+                    unwilling to provide the default response. This response is
+                    related to
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation"
+                      >Content Negotiation practises.</a
+                    ><br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">
+                    407 - Proxy Authentication Required
+                  </button>
+                  <p>
+                    Similar to 401 - Unauthorised, except the authentication
+                    must be performed by a proxy.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/407"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">408 - Request Timeout</button>
+                  <p>
+                    The server is in an idle state, or shut down the
+                    connection.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">409 - Conflict</button>
+                  <p>
+                    The request conflicts with the status of the server.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">410 - Gone</button>
+                  <p>
+                    The requested content has been remove, andd no replacement
+                    is provided.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">411 - Length Required</button>
+                  <p>
+                    The <code>Content-length</code> header is required by the
+                    server, but not provided by the client.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/411"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">412 - Precondition Failed</button>
+                  <p>
+                    The client has provided preconditions which the server does
+                    not meet.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/412"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">413 - Payload Too Large</button>
+                  <p>
+                    The payload sent by the client is larger than the limits
+                    provided by the server.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">414 - Unsupported Media Type</button>
+                  <p>
+                    The payload format is unsupported by the server, or the
+                    server supports it, but won't accept it.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/414"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">415 - URI Too Long</button>
+                  <p>
+                    The URI provided by the client is longer than the server is
+                    willing to interpret, or the URL loops on itself due to a
+                    faulty redirection.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/415"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">417 - Expectation Failed</button>
+                  <p>
+                    The <code>expect</code> header value could not be fulfilled
+                    by the server.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/417"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">418 - I'm A Teapot</button>
+                  <p>
+                    The server is, permanently, a teapot and, therefore, cannot
+                    and refuses to brew coffee.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">421 - Misdirected Request</button>
+                  <p>
+                    The addressed server could not process the request.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">425 - Too Early (EXPERIMENTAL)</button>
+                  <p>
+                    The server is unwilling to process a request which may be
+                    replayed<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/425"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">426 - Upgrade Required</button>
+                  <p>
+                    The server is unwilling to complete the request on the
+                    current protocol, but can do so after upgrading to an
+                    alternate one.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/426"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">428 - Precondition Required</button>
+                  <p>
+                    The server required the request to be a conditional<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/428"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">429 - Too Many Requests</button>
+                  <p>
+                    THe client sent too many requests within a certain
+                    timeframe.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">
+                    431 - Request Header Fields Too Large
+                  </button>
+                  <p>
+                    The server is unwilling to process the request as the
+                    request headers are too large.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/431"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="accordionEl">
+                  <button type="button">
+                    451 - Unavailable For Legal Reasons
+                  </button>
+                  <p>
+                    The server cannot provide the resource due to legal
+                    complications.<br /><a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/426"
+                      >Read more at MDN Wed Docs</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="ex-nav scn-lft flex-col txt-rht flex-itm-lft">
-        <h2 class="overline all-caps">navigation</h2>
-        <ul>
-          <li><a href="/index.html" class="inactive">Home</a></li>
-          <li><a href="/about.html" class="inactive">About</a></li>
-          <li><a href="/map.html" class="inactive">Map</a></li>
-          <li><a href="/learning.html" class="active">4XX Codes</a></li>
-          <li><a href="/instructions.html" class="inactive">How to Play</a></li>
-          <li>
-            <a href="/credits.html" class="inactive">Credits & Contact</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+        <div class="ex-nav scn-lft flex-col txt-rht flex-itm-lft">
+          <h2 class="overline all-caps">navigation</h2>
+          <ul>
+            <li><a href="/index.html" class="inactive">Home</a></li>
+            <li><a href="/about.html" class="inactive">About</a></li>
+            <li><a href="/map.html" class="inactive">Map</a></li>
+            <li><a href="/learning.html" class="active">4XX Codes</a></li>
+            <li>
+              <a href="/instructions.html" class="inactive">How to Play</a>
+            </li>
+            <li>
+              <a href="/credits.html" class="inactive">Credits & Contact</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

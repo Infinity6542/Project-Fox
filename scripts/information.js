@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 
 let side = gsap.timeline({

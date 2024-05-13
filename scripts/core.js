@@ -1,3 +1,5 @@
+
+
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -16,7 +18,9 @@ function clear() {
   location.reload();
 }
 
-let prefersRedMo = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+let prefersRedMo =
+  window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
+  window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
 if (!!prefersRedMo) {
   localStorage.setItem("prefersReducedMotion", "true");

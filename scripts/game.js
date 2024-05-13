@@ -1,3 +1,4 @@
+
 class Response {
   constructor(name, code, DOMe) {
     this.name = name;

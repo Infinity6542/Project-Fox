@@ -1,3 +1,4 @@
+
 let bigImage = document.querySelector(".hub"),
   smallImage = document.querySelector("#miniMap"),
   marker = document.querySelector("#mapMarker"),
