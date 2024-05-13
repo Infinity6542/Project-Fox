@@ -94,8 +94,12 @@
 }
 
 .content p {
-  margin-left: 25px;
-  margin-bottom: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desc {
+  margin-left: 25px !important;
 }
 
 .content .wrap-i {
