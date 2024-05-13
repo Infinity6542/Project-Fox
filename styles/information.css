@@ -401,7 +401,6 @@
   display: none;
 }
 
-/* TODO: this will be applied in JS */
 .slide[data-index="1"] {
   opacity: 1;
   display: inline-flex;
