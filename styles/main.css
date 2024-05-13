@@ -403,6 +403,17 @@ a:has(button) {
   }
 }
 
+code {
+  font-family: FiraCode;
+  color: whitesmoke;
+  background-color: grey;
+  padding: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 95%;
+  border-radius: 5px;
+}
+
 /* consistent */
 .overline {
   font-size: 0.95rem;

@@ -405,3 +405,42 @@
   opacity: 1;
   display: inline-flex;
 }
+
+/* accordion */
+.accordion {
+  margin-top: 20px;
+}
+.accordianEl {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionEl button {
+  color: var(--text);
+  background: rgba(89, 89, 89, 0.2);
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+}
+
+.activeBtn {
+  background: rgba(48, 48, 48, 0.6) !important;
+}
+
+.accordionEl button:hover {
+  background: rgba(89, 89, 89, 0.3);
+}
+
+.accordionEl p {
+  margin-left: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s ease-out;
+  margin-bottom: 0px;
+}
+
+.accordionEl a {
+  position: relative;
+  font-size: .9rem;
+  bottom: 5px;
+}
