@@ -1,3 +1,7 @@
+body {
+  height: 225vh !important;
+}
+
 .heroContent {
   position: relative;
   top: 98px;

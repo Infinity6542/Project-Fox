@@ -78,7 +78,7 @@ let pre1 = gsap.timeline({
     trigger: ".preDrive",
     start: "top top",
     pin: true,
-    end: "+=600%",
+    end: "+=650%",
     scrub: 1,
   },
 });

@@ -35,11 +35,11 @@
 * {
   font-family: Satoshi;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 body {
-  min-height: 100vh;
+  height: 200vh;
   width: 100vw;
   overflow-x: hidden;
   background: var(--bg);
@@ -47,6 +47,7 @@ body {
 }
 
 body h1 {
+  background: var(--bg);
   color: var(--text);
   overflow: hidden;
 }
