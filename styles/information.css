@@ -80,22 +80,18 @@
   position: relative;
   content: "";
   width: 10px;
-  height: 1s;
+  height: 100%;
   background: var(--accent);
 }
 
 .content p {
   width: 55vw;
   font-size: 1.1rem;
+  margin-right: auto;
 }
 
 .content p a {
   color: var(--text);
-}
-
-.content p {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .desc {
@@ -121,6 +117,10 @@
 
 .header1 > .stop{
   right: 35px; 
+}
+
+.header1 > h1 {
+  width: 60vw;
 }
 
 /* .overview::before {
@@ -193,6 +193,12 @@
 
 .cta {
   z-index: 2;
+}
+
+.wrap-i > * {
+  position: relative;
+  left: 0 !important;
+  margin-right: auto;
 }
 
 /* decoration */
@@ -321,7 +327,7 @@
   background: linear-gradient(315deg, #180902, #140702);
   box-shadow: -26px -26px 52px #000000, 26px 26px 52px #2b1004;
   z-index: 1;
-  margin-top: 25px;
+  margin: 25px auto 0 auto;
   justify-content: center;
 }
 
@@ -345,6 +351,8 @@
 
 .slide p {
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slide .overline {
