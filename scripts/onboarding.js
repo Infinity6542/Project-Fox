@@ -65,7 +65,6 @@ if (
   //* 3/3
   onboard4();
 } else if (t === false) {
-  // do nothing
 } else {
   console.log(
     "[ERRO] [ONBO] The referer says to begin onboarding, yet it seems to be complete. Ignoring request."
@@ -119,7 +118,7 @@ function onboard2() {
     height: 500,
     width: 500,
   });
-  instruct("Let's get you moving", "<img src='/assets/tut.gif' style='height: 400px; width: 400px; text-align: center;' alt='Click and drag to move around.'></img>", "Next", "about");
+  instruct("Let's get you moving (you can also click and drag the minimap!)", "<img src='/assets/tut.gif' style='height: 400px; width: 400px; text-align: center;' alt='Click and drag to move around.'></img>", "Next", "about");
   btn = document.getElementById("btn");
   btn.onclick = () => {
     localStorage.setItem("onboardProg", "2");

@@ -1,7 +1,7 @@
 
-let bigImage = document.querySelector(".hub"),
-  smallImage = document.querySelector("#miniMap"),
-  marker = document.querySelector("#mapMarker"),
+bigImage = document.querySelector(".hub");
+smallImage = document.querySelector("#miniMap");
+let marker = document.querySelector("#mapMarker"),
   smallX = gsap.quickSetter(marker, "x", "px"),
   smallY = gsap.quickSetter(marker, "y", "px"),
   bigX = gsap.quickSetter(bigImage, "x", "px"),
