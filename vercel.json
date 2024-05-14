@@ -3,7 +3,7 @@
       { "source": "/loop.html", "destination": "/loop.html", "permanent": false }
     ],
     "routes": [
-      {"status": "400", "dest": "/400.html" },
+      { "src": "/(.*)", "status": "400", "dest": "/400.html" },
       {"status": "401", "dest": "/401.html" },
       {"status": "403", "dest": "/403.html" },
       {"status": "404", "dest": "/404.html" },
