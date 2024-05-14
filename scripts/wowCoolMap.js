@@ -56,15 +56,15 @@ window.onload = () => {
   var map = document.getElementById("light__off");
   var miniMap = document.querySelector(".mini-map");
   if (localStorage.getItem("end") === "unlocked") {
-    var src = "assets/map_6@2x.png";
+    var src = "assets/map_6.webp";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
   } else if (localStorage.getItem("achieved") === "true") {
-    var src = "assets/map_5@2x.png";
+    var src = "assets/map_5.webp";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
   } else if (localStorage.getItem("dashboard") === "unlocked") {
-    var src = "assets/map_2@2x.png";
+    var src = "assets/map_5.webp";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
   } else {
