@@ -37,7 +37,10 @@ if (!!prefersRedMo) {
       ease: "power1.out",
     }
   );
-
+  gsap.to(".driver", {
+    opacity: 0,
+    duration: 0,
+  })
   gsap.to(".heroContent > .station", {
     x: 0,
     duration: 1,
@@ -68,6 +71,14 @@ if (!!prefersRedMo) {
     duration: 1,
     ease: "back.out",
   });
+  gsap.to(".path, .station, .heroContent > h1", {
+    opacity: 0,
+    delay: 3.5,
+  });
+  gsap.to(".driver", {
+    opacity: 1,
+    delay: 2,
+  })
 }
 
 // Other animations
@@ -105,3 +116,93 @@ pre1.addLabel("start")
 .addLabel("text5")
 .to("#about h1[data-index='5']", { opacity: 0, yPercent: -100}, "text5")
 .from("#about h1[data-index='6']", { opacity: 0, yPercent: 50}, "text5");
+
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789abcdefghijklmnopqrstuvwxyz'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+setTimeout(() => {
+  const phrases = [
+    'Hello there.',
+    'Let me explain that',
+    'finding HTTP status codes',
+    'is, by no means, easy.',
+    'But, with a little help,',
+    'and some knowledge from',
+    'the Learning page,',
+    'I\'m sure that you can do it,',
+    'just as I did.',
+    'I believe in you,',
+    ' and good luck.',
+    'You may scroll to continue.',
+    '',
+    '',
+    '*radio static*',
+    'h e l p    m e',
+    ''
+  ]
+  
+  const el = document.querySelector('.text')
+  const fx = new TextScramble(el)
+  
+  let counter = 0
+  
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 1200)
+    })
+    counter = (counter + 1) % phrases.length
+  }
+  
+  next();
+}, 3700);

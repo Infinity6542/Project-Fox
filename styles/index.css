@@ -97,3 +97,22 @@ a {
 #about {
   height: 300%;
 }
+
+.heroBodyTxt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 98px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroBodyTxt .text{
+  font-size: 5em;
+}
+
+.dud {
+  color: rgba(255, 255, 255, 0.322);
+}
