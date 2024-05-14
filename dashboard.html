@@ -35,10 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <!--End GSAP core import-->
     <!--Importing GSAP plugins-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"
-      defer
-    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
       defer
@@ -100,6 +97,9 @@
       </div>
       <!-- <div class="nav-acc"></div> -->
     </nav>
+    <span class="material-symbols-outlined" onclick="login()">
+      account_circle
+    </span>
   </header>
 
   <body>
@@ -132,7 +132,7 @@
         <div class="wrap-i">
           <div class="overview">
             <div class="header1">
-              <div class="stop stop1">
+              <div class="stop">
                 <span class="material-symbols-outlined"> visibility </span>
               </div>
               <h1>Woah... You're not meant to be here...</h1>
@@ -146,6 +146,66 @@
           </div>
         </div>
       </div>
+      <section class="dec">
+        <div class="abandoned">
+          <img
+            src="/assets/driver.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-2500%, 1000%) rotate(31deg);
+              filter: grayscale(0.8);
+            "
+          />
+          <img
+            src="/assets/carriage.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-1900%, 1100%) rotate(-34deg);
+              filter: grayscale(0.1);
+            "
+          />
+          <img
+            src="/assets/carriage.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-2430%, 1300%) rotate(20deg);
+              filter: grayscale(0.4);
+            "
+          />
+          <img
+            src="/assets/carriage.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-1500%, 1000%) rotate(-31deg);
+              filter: grayscale(1);
+            "
+          />
+          <img
+            src="/assets/carriage.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-1500%, 1400%) rotate(90deg);
+              filter: grayscale(0.2);
+            "
+          />
+          <img
+            src="/assets/carriage.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-1500%, 1200%) rotate(64deg);
+              filter: grayscale(0.6);
+            "
+          />
+          <img
+            src="/assets/driver.svg"
+            alt="Abandoned train driver carriage"
+            style="
+              transform: translate(-800%, 1400%) rotate(31deg);
+              filter: grayscale(0.2);
+            "
+          />
+        </div>
+      </section>
       <div class="upload">
         <label for="upload"
           >Try uploading some text (accepts .txt, max 4MB):</label
@@ -164,7 +224,7 @@
           <li>
             <a href="/credits.html" class="inactive">Credits & Contact</a>
           </li>
-          <li><a href="/dashboard.html" class="active">???</a></li>
+          <li><a href="/loop.html" class="active">???</a></li>
         </ul>
       </div>
     </section>
