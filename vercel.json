@@ -1,5 +1,8 @@
 {
     "redirects": [
       { "source": "/loop.html", "destination": "/loop.html", "permanent": false }
+    ],
+    "routes": [
+      { "source": "/(.*)", "status": "404", "dest": "/404.html" }
     ]
   }
