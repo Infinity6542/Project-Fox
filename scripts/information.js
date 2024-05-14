@@ -1,4 +1,3 @@
-
 gsap.registerPlugin(ScrollTrigger);
 
 let side = gsap.timeline({
@@ -62,16 +61,20 @@ function completeOnboard() {
 // Accordion
 document.querySelectorAll(".accordionEl").forEach((item) => {
   item.addEventListener("click", (event) => {
-    let el = event.target.nextElementSibling;
-    event.target.classList.toggle("activeBtn");
-    if (el.style.maxHeight) {
-      el.style.maxHeight = null;
-      el.style.opacity = "0";
-      el.style.marginBottom = "0px"
+    if (event.target.nodeName === "P") {
+      // Do nothing
     } else {
-      el.style.maxHeight = el.scrollHeight + "px";
-      el.style.opacity = "1";
-      el.style.marginBottom = "5px"
+      let el = event.target.nextElementSibling;
+      event.target.classList.toggle("activeBtn");
+      if (el.style.maxHeight) {
+        el.style.maxHeight = null;
+        el.style.opacity = "0";
+        el.style.marginBottom = "0px";
+      } else {
+        el.style.maxHeight = el.scrollHeight + "px";
+        el.style.opacity = "1";
+        el.style.marginBottom = "5px";
+      }
     }
   });
 });
