@@ -29,6 +29,7 @@ if (localStorage.getItem(code) === "t") {
     ")" +
     " HTTP response code.";
   localStorage.setItem("achieved", "true");
+  localStorage.setItem("dashboard", "unlocked");
 } else {
   console.error(
     "[ERR] [CORE] [CRIT] Invalid state for response " +

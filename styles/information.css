@@ -115,8 +115,8 @@
   align-items: center;
 }
 
-.header1 > .stop{
-  right: 35px; 
+.header1 > .stop {
+  right: 35px;
 }
 
 .header1 > h1 {
@@ -191,10 +191,6 @@
   left: 0.3em;
 }
 
-.cta {
-  z-index: 2;
-}
-
 .wrap-i > * {
   position: relative;
   left: 0 !important;
@@ -250,6 +246,21 @@
   animation-delay: 1s;
 } */
 
+/* achievements */
+#toggleCodes:hover {
+  background: var(--secondary) !important;
+  color: var(--text) !important;
+  transition: all .4s ease;
+}
+
+/* .codes {
+  border: white 1px solid;
+  border-radius: 10px;
+  background: gray;
+} */
+
+/* end */
+
 .stop {
   position: relative;
   height: 40px;
@@ -261,7 +272,7 @@
   justify-content: center;
 }
 
-.stop2 img {
+.stop img {
   height: 27px;
   width: 27px;
   color: var(--text);
@@ -333,7 +344,7 @@
 
 .guide::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   height: 10px;
@@ -396,12 +407,12 @@
 
 .slide .grp-btn button {
   font-weight: 500;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .slide .grp-btn .primBtn span {
   top: 2.5em;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .slide {
@@ -443,12 +454,23 @@
   margin-left: 10px;
   max-height: 0;
   overflow: hidden;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   margin-bottom: 0px;
 }
 
 .accordionEl a {
   position: relative;
-  font-size: .9rem;
+  font-size: 0.9rem;
   bottom: 5px;
+}
+
+.accordionEl button::after {
+  content: "+";
+  position: relative;
+  right: 0;
+  margin: auto 5px auto auto;
+}
+
+.activeBtn::after {
+  content: "-" !important;
 }

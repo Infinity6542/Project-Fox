@@ -1,11 +1,3 @@
-.complete {
-    color: green;
-}
-
-.incomplete {
-    color: red;
-}
-
 input[type="checkbox"] {
     user-select: none;
     display: none;
@@ -13,14 +5,17 @@ input[type="checkbox"] {
 
 label {
     user-select: none;
-    display: none;
 }
 
-body {
-    position: absolute;
-    top: 98px !important;
+.incomplete {
+    color: var(--no);
 }
 
 .complete {
-    background: var(--yes);
+    color: var(--yes);
 }
+
+
+/* .complete {
+    background: var(--yes);
+} */

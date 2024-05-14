@@ -35,10 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <!--End GSAP core import-->
     <!--Importing GSAP plugins-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"
-      defer
-    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
       defer
@@ -134,7 +131,7 @@
         <div class="wrap-i flex-row" style="z-index: 1">
           <div class="overview" style="margin-bottom: 70px">
             <div class="header1">
-              <div class="stop stop1" style="right: 40px !important;">
+              <div class="stop">
                 <span class="material-symbols-outlined"> visibility </span>
               </div>
               <h1>Overview</h1>
@@ -150,7 +147,7 @@
           </div>
           <div class="cta">
             <div class="header1">
-              <div class="stop stop2">
+              <div class="stop">
                 <span class="material-symbols-outlined"
                   ><img
                     src="/assets/cityrail.svg"
@@ -158,14 +155,26 @@
                     onclick="window.location.href = '/451.html'"
                 /></span>
               </div>
-              <h1>The Beginning of Something Big</h1>
+              <h1 style="line-height: 1.3em;">The Beginning of Something Big</h1>
             </div>
             <div class="desc">
               <p>
-                A big leap takes a little courage.<br />Begin your learning
-                journey today by reading a one-sentence summary of each 4XX HTTP
-                status code (client-side). There are, however, certain codes
-                omitted from the game, as I am unable to replicate them.<br />
+                A big leap takes a little courage.<br />
+                Let's start by learning what a 4XX status code is.
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP"
+                  >HTTP</a
+                >
+                (HyperText Protocol Transfer) status codes are simply universal
+                "codes", or numbers, that the server responds with. Basic HTTP
+                response codes that you may recognise include 200 OK and 404 Not
+                Found.<br/>The Xs in 4XX are simply placeholders for other numbers.
+                4XX (also commonly known as 400-499 codes) are known as
+                client-side error codes, meaning that the error is usually a
+                result of a fault on the client's end (in this case, the client
+                is you!).<br /><br />Begin your learning journey today by reading a
+                one-sentence summary of each 4XX HTTP status code (client-side).
+                There are, however, certain codes omitted from the game, as I am
+                unable to replicate them.<br />
                 The below codes are the ones you will need to find in the game.
               </p>
               <div class="accordion">
@@ -190,11 +199,11 @@
                   </p>
                 </div>
                 <div class="accordionEl">
-                  <button type="button">402 - Forbidden</button>
+                  <button type="button">403 - Forbidden</button>
                   <p>
                     The client, although known to the server, is unauthorised to
                     access the information or data requested.<br /><a
-                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402"
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
                       >Read more at MDN Web Docs</a
                     >
                   </p>
@@ -343,7 +352,7 @@
                   <p>
                     The server is, permanently, a teapot and, therefore, cannot
                     and refuses to brew coffee.<br /><a
-                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413"
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418"
                       >Read more at MDN Web Docs</a
                     >
                   </p>
@@ -390,7 +399,7 @@
                 <div class="accordionEl">
                   <button type="button">429 - Too Many Requests</button>
                   <p>
-                    THe client sent too many requests within a certain
+                    The client sent too many requests within a certain
                     timeframe.<br /><a
                       href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
                       >Read more at MDN Web Docs</a

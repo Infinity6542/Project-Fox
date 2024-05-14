@@ -50,6 +50,7 @@ body h1 {
   background: var(--bg);
   color: var(--text);
   overflow: hidden;
+  line-height: 1em;
 }
 
 .toggle {
@@ -394,6 +395,7 @@ button {
   flex-direction: row;
   text-decoration: none;
   align-items: center;
+  cursor: pointer;
 }
 
 a:has(button) {
@@ -412,6 +414,15 @@ code {
   padding-bottom: 0;
   font-size: 95%;
   border-radius: 5px;
+}
+
+table, th, td {
+  border: 1px var(--text) solid;
+  border-collapse: collapse;
+}
+
+table a {
+  color: var(--text);
 }
 
 /* consistent */
