@@ -28,7 +28,7 @@ if (!!prefersRedMo) {
   // do nothing
 }
 
-fetch(location.href)
+fetch(new Request(location.href))
 .then((response) => {
   if (response == 200) {
     // all good, do nothing
