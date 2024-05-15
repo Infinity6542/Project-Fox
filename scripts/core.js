@@ -30,7 +30,7 @@ if (!!prefersRedMo) {
 
 fetch(new Request(location.href))
 .then((response) => {
-  if (response.status == 200) {
+  if (response.ok) {
     // all good, do nothing
   } else if (response.status > 499 && response < 400) {
     console.error("[CRIT] [ERRO] [HTTP] Something went wrong." + response);
