@@ -201,7 +201,7 @@ header > nav .logo img {
 }
 
 .preloader {
-  transition: opacity .6s ease-out;
+  transition: opacity 0.6s ease-out;
 }
 
 .preloader > .container {
@@ -408,15 +408,18 @@ a:has(button) {
 code {
   font-family: FiraCode;
   color: whitesmoke;
-  background-color: grey;
+  background-color: rgb(50, 50, 50);
   padding: 2px;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 95%;
   border-radius: 5px;
+  outline: rgba(255, 255, 255, 0.25) solid 1px;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px var(--text) solid;
   border-collapse: collapse;
 }
@@ -440,12 +443,11 @@ table a {
 }
 
 .rvs-btn {
-    background: var(--text);
-    outline: none;
-    border: none;
-    height: 100%;
-    width: 100%;
-  
+  background: var(--text);
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
 }
 
 .scn-rht {
@@ -508,7 +510,7 @@ table a {
 
 .primBtn {
   background: var(--text);
-  color:#3E1606;
+  color: #3e1606;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -521,7 +523,7 @@ table a {
 }
 
 .altBtn {
-  background: #3E1606;
+  background: #3e1606;
   color: var(--text);
 }
 
@@ -533,4 +535,19 @@ table a {
 
 .pad-l50 {
   padding-left: 50px;
+}
+
+.exLink::after {
+  position: relative;
+  top: 3px;
+  height: 15px;
+  width: 15px;
+  content: "";
+  display: inline-flex;
+  margin-left: 5px;
+  -webkit-mask-image: url(/assets/exLink.svg);
+  mask-image: url(/assets/exLink.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--text);
 }
