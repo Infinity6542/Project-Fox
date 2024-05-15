@@ -28,10 +28,10 @@ if (
     y: -1900,
     duration: 2,
   });
-  gsap.to(".onboarding__wrapper", {
-    x: 150,
-    y: 75,
-  });
+  // gsap.to(".onboarding__wrapper", {
+  //   x: 150,
+  //   y: 75,
+  // });
   document.querySelector(".highlight").style.opacity = 1;
   // document.querySelector(".highlight").style.display = "inline";
   // document.querySelector(".highlight").style.top = "30%";
@@ -117,6 +117,7 @@ function onboard2() {
   gsap.to(".onboarding__wrapper", {
     height: 500,
     width: 500,
+    yPercent: -20,
   });
   instruct("Let's get you moving (you can also click and drag the minimap!)", "<img src='/assets/tut.gif' style='height: 400px; width: 400px; text-align: center;' alt='Click and drag to move around.'></img>", "Next", "about");
   btn = document.getElementById("btn");
@@ -139,7 +140,7 @@ function onboard3() {
     duration: 2,
   });
   gsap.to(".onboarding__wrapper", {
-    height: "20vh",
+    height: "15vh",
     width: "40vw",
   });
   document.querySelector(".highlight").style.opacity = 1;
