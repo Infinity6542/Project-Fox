@@ -35,6 +35,7 @@ fetch(new Request(location.href))
   } else if (response > 499 && response < 400) {
     console.error("[CRIT] [ERRO] [HTTP] Something went wrong." + response);
   } else {
-    location.href = `/${response}.html`;
+    console.log(response);
+    // location.href = "/" + response + ".html";
   }
 });
