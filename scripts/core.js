@@ -28,13 +28,13 @@ if (!!prefersRedMo) {
   // do nothing
 }
 
-// fetch(new Request(location.href))
-// .then((response) => {
-//   if (response == 200) {
-//     // all good, do nothing
-//   } else if (response > 499 && response < 400) {
-//     console.error("[CRIT] [ERRO] [HTTP] Something went wrong." + response);
-//   } else {
-//     location.href = "/" + response + ".html";
-//   }
-// });
+fetch(new Request(location.href))
+.then((response) => {
+  if (response == 200) {
+    // all good, do nothing
+  } else if (response > 499 && response < 400) {
+    console.error("[CRIT] [ERRO] [HTTP] Something went wrong." + response);
+  } else {
+    location.href = `/${response}.html`;
+  }
+});
