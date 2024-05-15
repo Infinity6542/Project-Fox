@@ -36,6 +36,6 @@ fetch(new Request(location.href))
     console.error("[CRIT] [ERRO] [HTTP] Something went wrong." + response);
   } else {
     console.log(response.status);
-    // location.href = "/" + response + ".html";
+    location.href = "/" + response + ".html";
   }
 });
