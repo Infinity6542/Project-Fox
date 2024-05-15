@@ -1,0 +1,24 @@
+.upload {
+  position: absolute;
+  bottom: 0;
+  padding-left: 2em;
+  opacity: 0.1;
+}
+
+header .material-symbols-outlined {
+  position: absolute;
+  right: 0;
+  margin: auto 20px auto 0;
+  font-size: 3rem;
+  color: var(--primary);
+  opacity: .3;
+  transition: all .3s ease-in-out;
+}
+
+header .material-symbols-outlined:hover {
+  opacity: 1;
+  color: var(--accent);
+  margin: auto 30px auto 0;
+  font-size: 4rem;
+  opacity: .9;
+}

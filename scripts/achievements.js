@@ -1,3 +1,4 @@
+
 achievements = [
   badRequest,
   unauthorised,
@@ -17,9 +18,6 @@ achievements = [
   expectationFailed,
   imATeapot,
   misdirectedRequest,
-  unprocessableEntity,
-  locked,
-  failedDependency,
   tooEarly,
   upgradeRequired,
   preconditionRequired,

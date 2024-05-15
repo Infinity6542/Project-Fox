@@ -1,3 +1,4 @@
+
 const a = new URLSearchParams(window.location.search);
 const t = a.get("target");
 console.log("[CORE] [XXXX] Attempting to validate...");

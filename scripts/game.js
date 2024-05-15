@@ -1,3 +1,4 @@
+
 class Response {
   constructor(name, code, DOMe) {
     this.name = name;
@@ -96,21 +97,6 @@ let misdirectedRequest = new Response(
   "421",
   document.getElementById("421")
 );
-let unprocessableEntity = new Response(
-  "unprocessableEntity",
-  "422",
-  document.getElementById("422")
-);
-let locked = new Response(
-  "locked",
-  "423",
-  document.getElementById("423")
-);
-let failedDependency = new Response(
-  "failedDependency",
-  "424",
-  document.getElementById("424")
-);
 let tooEarly = new Response(
   "tooEarly",
   "425",
@@ -163,9 +149,6 @@ if (!loadNo) {
   init("expectationFailed", "417", "f");
   init("imATeapot", "418", "f");
   init("misdirectedRequest", "421", "f");
-  init("unprocessableEntity", "422", "f");
-  init("locked", "423", "f");
-  init("failedDependency", "424", "f");
   init("tooEarly", "425", "f");
   init("upgradeRequired", "426", "f");
   init("preconditionRequired", "428", "f");

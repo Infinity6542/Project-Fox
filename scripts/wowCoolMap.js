@@ -1,6 +1,7 @@
-let bigImage = document.querySelector(".hub"),
-  smallImage = document.querySelector("#miniMap"),
-  marker = document.querySelector("#mapMarker"),
+
+bigImage = document.querySelector(".hub");
+smallImage = document.querySelector("#miniMap");
+let marker = document.querySelector("#mapMarker"),
   smallX = gsap.quickSetter(marker, "x", "px"),
   smallY = gsap.quickSetter(marker, "y", "px"),
   bigX = gsap.quickSetter(bigImage, "x", "px"),
@@ -54,16 +55,16 @@ alignSmall();
 window.onload = () => {
   var map = document.getElementById("light__off");
   var miniMap = document.querySelector(".mini-map");
-  if (localStorage.getItem("end") === "t") {
-    var src = "assets/map_6@2x.png";
+  if (localStorage.getItem("end") === "unlocked") {
+    var src = "assets/map_6.webp";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
   } else if (localStorage.getItem("achieved") === "true") {
-    var src = "assets/map_5@2x.png";
+    var src = "assets/map_5.webp";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
-  } else if (localStorage.getItem("dashboard") === "t") {
-    var src = "assets/map_2@2x.png";
+  } else if (localStorage.getItem("dashboard") === "unlocked") {
+    var src = "assets/map_5.webp";
     map.src = src;
     miniMap.style.backgroundImage = "url(/" + src + ")";
   } else {
