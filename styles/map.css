@@ -146,9 +146,9 @@ body {
 .onboarding__wrapper {
   z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
   position: fixed;
-  top: 60%;
-  left: 50%;
-  height: calc(10vh + 30px);
+  bottom: min(400px, 80px);
+  left: max(55%, 55vw);
+  height: calc(10vh + 50px);
   width: 40vw;
   transform: translate(-50%, -50%);
   pointer-events: none;
