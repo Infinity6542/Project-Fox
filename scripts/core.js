@@ -1,5 +1,3 @@
-
-
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -28,8 +26,7 @@ if (!!prefersRedMo) {
   // do nothing
 }
 
-fetch(new Request(location.href))
-.then((response) => {
+fetch(new Request(location.href)).then((response) => {
   if (response.ok) {
     // all good, do nothing
   } else if (response.status > 499 && response < 400) {
