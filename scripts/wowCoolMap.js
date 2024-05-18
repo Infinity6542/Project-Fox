@@ -1,4 +1,3 @@
-
 bigImage = document.querySelector(".hub");
 smallImage = document.querySelector("#miniMap");
 let marker = document.querySelector("#mapMarker"),
@@ -51,7 +50,10 @@ gsap.set(bigImage, {
 });
 bigDraggable.update();
 alignSmall();
-
+var loaded = false;
+function load() {
+  loaded = true;
+}
 window.onload = () => {
   var map = document.getElementById("light__off");
   var miniMap = document.querySelector(".mini-map");
@@ -70,13 +72,15 @@ window.onload = () => {
   } else {
     console.log("Starting out? Thanks for playing :)");
   }
-  document.querySelector("p").innerHTML = "rendering";
-  delay(5500).then(() => {
-    let e = document.querySelector(".preloader");
-    e.style.opacity = "0";
-    delay(1000).then(() => {
-      e.style.display = "none";
+  if (loaded == true) {
+    document.querySelector("p").innerHTML = "rendering";
+    delay(1500).then(() => {
+      let e = document.querySelector(".preloader");
+      e.style.opacity = "0";
+      delay(1000).then(() => {
+        e.style.display = "none";
+      });
     });
-  });
-  // bigImage.style.transform = "translate3d(29.9444px, 139.352px, 0px);";
+    // bigImage.style.transform = "translate3d(29.9444px, 139.352px, 0px);";
+  }
 };
