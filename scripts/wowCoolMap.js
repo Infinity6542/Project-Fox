@@ -72,7 +72,7 @@ window.onload = () => {
   } else {
     console.log("Starting out? Thanks for playing :)");
   }
-  if (loaded == true) {
+  if (!loaded) {
     document.querySelector("p").innerHTML = "rendering";
     delay(1500).then(() => {
       let e = document.querySelector(".preloader");
