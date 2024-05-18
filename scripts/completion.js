@@ -1,3 +1,4 @@
+
 let title = document.title.split("_", 3);
 let code = title[1];
 let err = title[2];
@@ -27,6 +28,8 @@ if (localStorage.getItem(code) === "t") {
     err +
     ")" +
     " HTTP response code.";
+  localStorage.setItem("achieved", "true");
+  localStorage.setItem("dashboard", "unlocked");
 } else {
   console.error(
     "[ERR] [CORE] [CRIT] Invalid state for response " +

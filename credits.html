@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <meta
+      name="description"
+      content="About Project Fox, the development behind it and more!"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <!--Importing GSAP core-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!--End GSAP core import-->
+    <!--Importing GSAP plugins-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"
+      defer
+    ></script>
+    <!--End GSAP plugin import-->
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/assets/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="/scripts/core.js" defer></script>
+    <script src="/scripts/information.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/information.css" />
+    <!--Google Icons (Material)-->
+    <style>
+      @font-face {
+        font-family: "Material Symbols Outlined";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v175/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2)
+          format("woff2");
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -moz-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <header>
+    <nav>
+      <div class="logo nav-main">
+        <div class="status"></div>
+        <a href="/index.html">
+          <img
+            draggable="false"
+            src="/assets/logo_icon@2x.png"
+            alt="Project Fox logo, depicting a somewhat realistic fox head."
+          />
+        </a>
+      </div>
+      <!-- <div class="nav-acc"></div> -->
+    </nav>
+  </header>
+
+  <body>
+    <section class="hero">
+      <div class="back">
+        <a href="javascript:history.back()"
+          ><button type="button" class="rvs-btn rnd100">
+            <span class="material-symbols-outlined"> arrow_back </span>
+            <p>Back</p>
+          </button></a
+        >
+      </div>
+      <div class="title">
+        <h1 class="overline all-caps fnt-20">information</h1>
+        <h2 class="headline">Credits & Contact</h2>
+        <div class="est">
+          <h3 class="all-caps">reading time</h3>
+          <p>2 minutes</p>
+        </div>
+      </div>
+      <img
+        src="/assets//trainntrackdec.png"
+        aria-hidden="true"
+        class="scn-rht decoration"
+        id="traintrackdec"
+      />
+    </section>
+    <section class="content">
+      <div class="wrap-o">
+        <div class="wrap-i">
+          <div class="overview" style="margin-bottom: 40px">
+            <div class="header1">
+              <div class="stop">
+                <span class="material-symbols-outlined"> visibility </span>
+              </div>
+              <h1>Overview</h1>
+            </div>
+            <div class="desc">
+              <p>
+                This page will go through the numerous contributions made in the
+                development of this Project. At the end, there'll also be a way
+                to contact me for any inquiries you may have.
+              </p>
+            </div>
+          </div>
+          <div class="credits" style="margin-bottom: 40px">
+            <div class="header1">
+              <div class="stop">
+                <div class="stop">
+                  <span class="material-symbols-outlined"> diversity_2 </span>
+                </div>
+              </div>
+              <h1>Attribution & Credits</h1>
+            </div>
+            <div class="desc">
+              <table style="width: 86%">
+                <tr>
+                  <th>Name</th>
+                  <th>Author</th>
+                  <th>Link</th>
+                </tr>
+                <tr>
+                  <td>GreenSock Animation Platform</td>
+                  <td>GreenSock</td>
+                  <td>
+                    <a
+                      href="https://gsap.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="exLink"
+                      >GSAP Website</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Canvas Confetti</td>
+                  <td>Kiril Vatev (aka catdad)</td>
+                  <td>
+                    <a
+                      href="https://github.com/catdad/canvas-confetti"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="exLink"
+                      >GitHub Repository</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Material Icons</td>
+                  <td>Google (material team)</td>
+                  <td>
+                    <a
+                      href="https://m3.material.io/styles/icons/overview"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="exLink"
+                      >Material Design</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Satoshi</td>
+                  <td>Indian Type Foundry</td>
+                  <td>
+                    <a
+                      href="https://www.indiantypefoundry.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="exLink"
+                      >ITF Website</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>MDN Web Docs</td>
+                  <td>Mozilla Corporation</td>
+                  <td>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="exLink"
+                      >Mozilla Developers</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>External link icon (CC BY-SA 3.0)</td>
+                  <td>Font Awesome by Dave Gandy</td>
+                  <td>
+                    <a
+                      href="https://fortawesome.github.com/Font-Awesome"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="exLink"
+                      >GitHub Repository</a
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="overview" style="margin-bottom: 40px">
+            <div class="header1">
+              <div class="stop">
+                <span class="material-symbols-outlined"> contacts </span>
+              </div>
+              <h1>Contact</h1>
+            </div>
+            <div class="desc">
+              <p>
+                Need to reach out?<br />You can reach me via email at
+                <a href="mailto:isd6542@gmail.com" class="exLink"
+                  >isd6542@gmail.com</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ex-nav scn-lft flex-col txt-rht flex-itm-lft">
+        <h2 class="overline all-caps">navigation</h2>
+        <ul>
+          <li><a href="/index.html" class="inactive">Home</a></li>
+          <li><a href="/about.html" class="inactive">About</a></li>
+          <li><a href="/map.html" class="inactive">Map</a></li>
+          <li><a href="/learning.html" class="inactive">4XX Codes</a></li>
+          <li><a href="/instructions.html" class="inactive">How to Play</a></li>
+          <li>
+            <a href="/credits.html" class="active">Credits & Contact</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

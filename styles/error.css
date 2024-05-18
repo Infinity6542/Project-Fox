@@ -1,3 +1,10 @@
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
 .bg {
   position: absolute;
   top: 0px;
@@ -160,6 +167,12 @@
 .aesPack1 {
   display: none;
 }
+
+/* button hover effects */
+/* a:hover ~ a button {
+  opacity: 0;
+  transition: .5s ease-in-out;
+} */
 
 /* Optional decoration for larger screens */
 @media screen and (min-width: 1750px) {

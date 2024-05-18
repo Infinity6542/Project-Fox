@@ -15,12 +15,18 @@
   src: url(/styles/fonts/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: FiraCode;
+  src: url(/styles/fonts/Fira/firaCode-var.ttf);
+}
+
 :root {
   --bg: #160802;
   --text: #fbe1da;
   --accent: #f39336;
   --primary: #e1ae9b;
   --secondary: #982d09;
+  --tertiary: #d1a94e;
   --yes: #43c56c;
   --no: #b12b14;
   --highlight: #3a312f;
@@ -29,10 +35,11 @@
 * {
   font-family: Satoshi;
   margin: 0;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 body {
+  height: 200vh;
   width: 100vw;
   overflow-x: hidden;
   background: var(--bg);
@@ -42,8 +49,8 @@ body {
 body h1 {
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
+  line-height: 1em;
 }
 
 .toggle {
@@ -64,7 +71,7 @@ body h1 {
 .slider {
   --size: 40px;
   position: relative;
-  right: -32px;
+  right: -40px;
   height: var(--size);
   width: var(--size);
   background: white;
@@ -73,7 +80,7 @@ body h1 {
 }
 
 .on {
-  right: 15px;
+  right: 10px;
 }
 
 .toggle p {
@@ -81,7 +88,7 @@ body h1 {
   display: none;
 }
 
-.active {
+#reduceMotion .active {
   background: var(--yes);
 }
 
@@ -96,6 +103,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
 }
 
 header > nav .logo img {
@@ -115,11 +123,10 @@ header > nav .logo img {
 }
 
 .station {
-  --size: 40px;
+  --size: 50px;
   position: relative;
   height: var(--size);
   width: var(--size);
-  /* background: transparent; */
   border: 8px var(--accent) solid;
   border-radius: 50%;
 }
@@ -191,4 +198,356 @@ header > nav .logo img {
 .sonner button span {
   font-size: 50px;
   color: var(--text);
+}
+
+.preloader {
+  transition: opacity 0.6s ease-out;
+}
+
+.preloader > .container {
+  --uib-size: 100;
+  --uib-color: var(--text);
+  --uib-speed: 3.5s;
+  --uib-stroke: 12;
+  --uib-mult: calc(var(--uib-size) / var(--uib-stroke));
+  --uib-stroke-px: calc(var(--uib-stroke) * 1px);
+  --uib-size-px: calc(var(--uib-size) * 1px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: var(--uib-size-px);
+  width: var(--uib-size-px);
+  z-index: 99999999999999;
+}
+
+.preloader .line {
+  position: absolute;
+  top: calc(50% - var(--uib-stroke-px) / 2);
+  left: calc(50% - var(--uib-stroke-px) / 2);
+  width: var(--uib-stroke-px);
+  height: var(--uib-stroke-px);
+  background-color: var(--uib-color);
+  animation: center-line var(--uib-speed) ease infinite;
+  transition: background-color 0.3s ease;
+  z-index: 99999999999999;
+}
+
+.preloader > .container::before,
+.preloader > .container::after {
+  content: "";
+  position: absolute;
+  width: var(--uib-stroke-px);
+  height: var(--uib-stroke-px);
+  background-color: var(--uib-color);
+  animation: explore var(--uib-speed) ease infinite;
+  transition: background-color 0.3s ease;
+  z-index: 99999999999999;
+}
+
+.preloader > .container::after {
+  animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.preloader > .container p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(3 * (var(--uib-stroke-px) / 2) + 3 * var(--uib-stroke-px) + 80%);
+  left: 50%;
+  font-size: 2.1em;
+  font-weight: 500;
+}
+
+@keyframes center-line {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  12.5%,
+  62.5% {
+    transform: scaleX(var(--uib-mult)) scaleY(1);
+  }
+  37.5%,
+  87.5% {
+    transform: scaleX(1) scaleY(var(--uib-mult));
+  }
+}
+
+@keyframes explore {
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+
+  12.5% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+
+  12.50001% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: top right;
+    top: 0;
+    left: initial;
+    right: 0;
+  }
+
+  25% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: top right;
+    top: 0;
+    left: initial;
+    right: 0;
+  }
+
+  37.5% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: top right;
+    top: 0;
+    left: initial;
+    right: 0;
+  }
+
+  37.5001% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: bottom right;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
+
+  50% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom right;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
+
+  62.5% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom right;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+  }
+
+  62.5001% {
+    transform: scaleX(var(--uib-mult)) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom left;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+
+  75% {
+    transform: scaleX(1) scaleY(1) translate(0%, 0%);
+    transform-origin: bottom left;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+
+  87.5% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: bottom left;
+    top: initial;
+    bottom: 0;
+    left: 0;
+  }
+
+  87.5001% {
+    transform: scaleX(1) scaleY(var(--uib-mult)) translate(0%, 0%);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+}
+
+.preloader {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: none;
+  background: var(--bg);
+  z-index: 9999999999999;
+}
+
+/* preset */
+button {
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+a:has(button) {
+  text-decoration: none;
+  button {
+    cursor: pointer;
+  }
+}
+
+code {
+  font-family: FiraCode;
+  color: whitesmoke;
+  background-color: rgb(50, 50, 50);
+  padding: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 95%;
+  border-radius: 5px;
+  outline: rgba(255, 255, 255, 0.25) solid 1px;
+}
+
+table,
+th,
+td {
+  border: 1px var(--text) solid;
+  border-collapse: collapse;
+}
+
+table a {
+  color: var(--text);
+}
+
+/* consistent */
+.overline {
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.rnd100 {
+  border-radius: 30px;
+}
+
+.rvs-btn {
+  background: var(--text);
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.scn-rht {
+  right: 0;
+}
+
+@keyframes moveOnPath {
+  from {
+    offset-distance: -9%;
+  }
+  to {
+    offset-distance: 91%;
+  }
+}
+
+/* 
+@keyframes moveOnPath2 {
+  from {
+    offset-distance: -20%;
+  }
+  to {
+    offset-distance: 80%;
+  }
+}
+
+@keyframes moveOnPath3 {
+  from {
+    offset-distance: -31%;
+  }
+  to {
+    offset-distance: 69%;
+  }
+} */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.txt-lft {
+  text-align: left;
+}
+
+.txt-cntr {
+  text-align: center;
+}
+
+.txt-rht {
+  text-align: right;
+}
+
+.overline {
+  font-family: FiraCode;
+}
+
+.primBtn {
+  background: var(--text);
+  color: #3e1606;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.primBtn span {
+  margin-left: 0;
+}
+
+.altBtn {
+  background: #3e1606;
+  color: var(--text);
+}
+
+.btn {
+  min-width: fit-content;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.pad-l50 {
+  padding-left: 50px;
+}
+
+.exLink::after {
+  position: relative;
+  top: 3px;
+  height: 15px;
+  width: 15px;
+  content: "";
+  display: inline-flex;
+  margin-left: 5px;
+  -webkit-mask-image: url(/assets/exLink.svg);
+  mask-image: url(/assets/exLink.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--text);
 }

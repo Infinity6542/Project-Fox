@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Whoops! Something clearly went wrong here..." />
+    <meta
+      name="description"
+      content="Whoops! Something clearly went wrong here..."
+    />
     <title>ERR_400_badRequest</title>
     <link
       rel="apple-touch-icon"
@@ -32,7 +35,6 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="msapplication-config" content="/assets/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="/styles/main.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"
       defer
@@ -40,7 +42,7 @@
     <script src="/scripts/game.js" defer></script>
     <script src="/scripts/confetti.js" defer></script>
     <script src="/scripts/completion.js" defer></script>
-    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/core.js" defer></script>
     <link rel="stylesheet" href="/styles/confetti.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/error.css" />
@@ -87,7 +89,7 @@
   </header>
   <body>
     <main>
-      <div class="bg">
+      <div class="bg" aria-hidden="true">
         <div class="component-1">
           <img
             draggable="false"
@@ -111,6 +113,7 @@
             draggable="false"
             src="/assets/wiggly_underline_1.svg"
             alt="A wiggly underline to the text 'derailed train' to add a bit of colour."
+            aria-hidden="true"
           />
         </div>
       </div>
@@ -146,7 +149,7 @@
         >
       </div>
     </main>
-    <div class="reducemotion">
+    <div class="reducemotion" style="display: none;">
       <label class="toggle" for="reduceMotion">
         <input
           name="reduceMotion"
@@ -161,13 +164,8 @@
     <div class="wrap-o">
       <a href="/achievements.html">Achievements</a>
     </div>
-    <div class="aesPack1">
-      <img
-        src="/assets/err_aes_1.svg"
-        draggable="false"
-        alt="Some more train decoration"
-        \
-      />
+    <div class="aesPack1" aria-hidden="true">
+      <img src="/assets/err_aes_1.svg" draggable="false" />
     </div>
     <div class="tsParticles"></div>
   </body>

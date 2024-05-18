@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,10 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <!--End GSAP core import-->
     <!--Importing GSAP plugins-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"
-      defer
-    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
       defer
@@ -49,15 +46,17 @@
     ></script>
     <!--End GSAP plugin import-->
     <!--Liking Google Icons (Material Icons)-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <!--End linking Material Icons-->
+    <script src="/scripts/core.js" defer></script>
     <script src="/scripts/index.js" defer></script>
     <script src="/scripts/onboarding.js" defer></script>
-    <script src="/scripts/wowCoolMap.js" defer></script>
 
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="stylesheet" href="styles/map.css" />
   </head>
   <header>
     <nav>
@@ -74,30 +73,51 @@
       <!-- <div class="nav-acc"></div> -->
     </nav>
   </header>
+
   <body>
     <!--*Exists for space optimisation-->
     <!-- <div class="ruleofthirds"></div> -->
+    <!-- <a href="./map.html?onboarding=true" aria-label="Go to the map page.">
+      <div class="sonner">
+        <div class="wrap-i">
+          <div class="text">
+            <h2><i>*mysterious sound*</i></h2>
+            <p>Something compels you to<br />click on this button...</p>
+          </div>
+          <button>
+            <span class="material-symbols-outlined"> arrow_downward </span>
+          </button>
+        </div>
+      </div>
+    </a> -->
     <section class="hero">
       <div class="heroContent">
         <!--Trying something new for once-->
         <div class="path"></div>
         <div class="station"></div>
         <div class="empty"></div>
+        <div class="heroBodyTxt">
+          <div class="text"></div>
+        </div>
         <h1 id="heroTxt">Project<br />Fox.</h1>
         <div class="empty"></div>
       </div>
     </section>
-    <div class="sonner" id="onboarding" onclick="alert('Hmmm... No work :(. Not yet at least...')">
-      <div class="wrap-i">
-        <div class="text">
-          <h2>Hey there!</h2>
-          <p>Button! Click click! But what do I do?</p>
-        </div>
-        <button>
-          <span class="material-symbols-outlined"> arrow_downward </span>
-        </button>
-      </div>
-    </div>
+    <section id="about">
+      <h1 data-index="1">Something went wrong. Or did it?</h1>
+      <h1 data-index="2">Maybe this was all done on purpose...</h1>
+      <h1 data-index="3">But let's leave that behind us (no pun intended).</h1>
+      <h1 data-index="4">We need you to find some HTTP error codes.</h1>
+      <h1 data-index="5">
+        You can <u><a href="about.html">learn more</a></u
+        >,
+      </h1>
+      <h1 data-index="6">
+        or you can <u><a href="map.html?onboarding=true">go now</a></u
+        >.
+      </h1>
+    </section>
+    <img src="/assets/driver.svg" aria-hidden="true" class="driver preDrive" />
   </body>
   <footer></footer>
 </html>

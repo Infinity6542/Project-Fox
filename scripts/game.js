@@ -1,3 +1,4 @@
+
 class Response {
   constructor(name, code, DOMe) {
     this.name = name;
@@ -96,21 +97,6 @@ let misdirectedRequest = new Response(
   "421",
   document.getElementById("421")
 );
-let unprocessableEntity = new Response(
-  "unprocessableEntity",
-  "422",
-  document.getElementById("422")
-);
-let locked = new Response(
-  "locked",
-  "423",
-  document.getElementById("423")
-);
-let failedDependency = new Response(
-  "failedDependency",
-  "424",
-  document.getElementById("424")
-);
 let tooEarly = new Response(
   "tooEarly",
   "425",
@@ -163,15 +149,15 @@ if (!loadNo) {
   init("expectationFailed", "417", "f");
   init("imATeapot", "418", "f");
   init("misdirectedRequest", "421", "f");
-  init("unprocessableEntity", "422", "f");
-  init("locked", "423", "f");
-  init("failedDependency", "424", "f");
   init("tooEarly", "425", "f");
   init("upgradeRequired", "426", "f");
   init("preconditionRequired", "428", "f");
   init("tooManyRequests", "429", "f");
   init("requestHeaderFieldsTooLarge", "431", "f");
   init("unavailableForLegalReasons", "451", "f");
+  localStorage.setItem("dashboard", "locked");
+  localStorage.setItem("achievements", "locked");
+  localStorage.setItem("end", "locked");
   localStorage.setItem("firstLoad", "-1");
 } else {
   let achievements = [
@@ -221,26 +207,13 @@ function init(name, code, status) {
   );
 }
 
-function clear() {
-  console.log("[LOGS] [PURG] [CACHE] Clearing cache...");
-  localStorage.clear();
-  console.log("[LOGS] [PURG] [CACHE] Cache successfully cleared.");
-  console.log("[LOGS] [PURG] Clearing checkboxes...");
-  let inputs = document.querySelectorAll('input[type="checkbox"]');
-  for (let i = 0; i < inputs.length; i++) {
-    inputs[i].checked = false;
-  }
-  console.log("[LOGS] [PURG] Checkboxes successfully cleared.");
-  console.log("[LOGS] [PURG] Reloading page to apply changes...");
-  location.reload();
-}
-
 function set(checkbox) {
   if (checkbox.checked === true) {
     try {
       localStorage.setItem(checkbox.id, "t");
       checkbox.parentElement.classList.remove("incomplete");
       checkbox.parentElement.classList.add("complete");
+      localStorage.setItem("achieved", "true");
     } catch (e) {
       console.error("[ERR] [CACHE] " + e);
     }

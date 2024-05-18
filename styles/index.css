@@ -1,3 +1,7 @@
+body {
+  height: 225vh !important;
+}
+
 .heroContent {
   position: relative;
   top: 98px;
@@ -17,6 +21,7 @@
   grid-column: 2;
   grid-row: 3;
   z-index: 3;
+  left: -6px;
 }
 
 #heroTxt {
@@ -60,10 +65,54 @@
     rgba(243, 147, 54, 1) 0%,
     rgba(243, 147, 54, 1) 33%,
     rgba(243, 147, 54, 1) 85%,
-    rgba(22, 8, 2, 1) 100%
+    var(--bg) 95%
   );
 }
 
 #onboarding {
   cursor: pointer;
+}
+
+a {
+  color: var(--text) !important;
+}
+
+/* pre anim */
+.preDrive {
+  position: absolute;
+  left: 32.5vw;
+  z-index: 2;
+  top: -1em;
+}
+
+#about h1 {
+  position: fixed;
+  margin-left: 31em;
+  transform: translate(0, -50%);
+  top: 49%;
+  overflow-y: hidden;
+  line-height: 1.3em;
+}
+
+#about {
+  height: 300%;
+}
+
+.heroBodyTxt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 98px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroBodyTxt .text{
+  font-size: 5em;
+}
+
+.dud {
+  color: rgba(255, 255, 255, 0.322);
 }

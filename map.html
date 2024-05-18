@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/assets/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--Importing GSAP core-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!--End GSAP core import-->
+    <!--Importing GSAP plugins-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <!--End GSAP plugin import-->
+    <!--Liking Google Icons (Material Icons)-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!--End linking Material Icons-->
+    <script src="/scripts/core.js"></script>
+    <script src="/scripts/onboarding.js" defer></script>
+    <script src="/scripts/wowCoolMap.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+  </head>
+
+  <body>
+    <div class="preloader">
+      <div class="container">
+        <div class="line"></div>
+        <p>loading</p>
+      </div>
+    </div>
+    <section class="hub__wrapper mainMap">
+      <div id="miniMap" class="position-fixed mini-map">
+        <div id="mapMarker" class="position-absolute mini-map-marker"></div>
+      </div>
+      <div class="hub__container">
+        <div class="hub hub-day">
+          <div class="hub__inner-wrapper">
+            <img id="light__off" src="/assets/map_1.webp" alt="Map." onload="load()"/>
+          </div>
+          <a href="/index.html"
+          aria-label="Navigates back to the homepage.">
+            <div
+              class="navBtn projectFox"
+            ></div>
+          </a>
+          <a
+            href="./about.html"
+            aria-label="Link to the about page. Learn something new about Project Fox, and maybe even something about its parent - Operation Boxed."
+          >
+            <div class="navBtn about"></div>
+          </a>
+          <a
+            href="./learning.html"
+            aria-label="Link to the learning page. Learn more about th4 4XX HTTP Response codes I've been rambling on about..."
+          >
+            <div class="navBtn _4xx"></div>
+          </a>
+          <a
+            href="./instructions.html"
+            aria-label="Link to the instructions page. Learn how the game works, and how to play it!"
+          >
+            <div class="navBtn instructions"></div>
+          </a>
+          <a
+            href="./validation.html?target=dashboard"
+            aria-label="Link to the dashboard."
+          >
+            <div class="navBtn dash"></div>
+          </a>
+          <a
+            href="./validation.html?target=achievements"
+            aria-label="Link to view your achievements. If you have any, that is."
+          >
+            <div class="navBtn achievements"></div>
+          </a>
+          <a
+            href="./validation.html?target=end"
+            aria-label="Link to the end of the game."
+          >
+            <div class="navBtn end"></div>
+          </a>
+          <a
+            href="./credits.html"
+            aria-label="Link to the credits page. (And some bonus content if you've completed the game!)"
+          >
+            <div class="navBtn credit"></div>
+          </a>
+        </div>
+        <div class="onboarding__wrapper" id="e">
+          <div class="onboarding__container">
+            <div class="onboard__centre">
+              <div class="wrap-i">
+                <div class="text">
+                  <h1 id="title"></h1>
+                  <p id="textbox"></p>
+                </div>
+                <div class="btn">
+                  <button type="button" id="btn">Loading content...</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="highlight"></div>
+    </section>
+  </body>
+</html>

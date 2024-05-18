@@ -1,3 +1,6 @@
+
+// Credit to Catdad for canvas-confetti. Repository can be found at:
+// https://github.com/catdad/canvas-confetti
 var duration = 15 * 300;
 var animationEnd = Date.now() + duration;
 var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
