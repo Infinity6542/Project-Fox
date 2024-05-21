@@ -113,7 +113,7 @@ function onboard2() {
   gsap.to(".onboarding__wrapper", {
     yPercent: -20,
   });
-  instruct("Let's get you moving (you can also click and drag the minimap!)", "<img src='/assets/tut.gif' style='height: 400px; width: 400px; text-align: center;' alt='Click and drag to move around.'></img>", "Next", "about");
+  instruct("Let's get you moving", "<p>You can also drag the outlined rectangle inside the minimap located in the bottom left corner.</p><img src='/assets/tut.gif' style='height: 400px; width: 400px; text-align: center;' alt='Click and drag to move around.'></img>", "Next", "about");
   btn = document.getElementById("btn");
   btn.onclick = () => {
     localStorage.setItem("onboardProg", "2");
@@ -159,7 +159,7 @@ function onboard4() {
   });
   document.querySelector(".highlight").style.opacity = 1;
   document.querySelector(".highlight").style.display = "inline";
-  document.querySelector(".hub").style.pointerEvents = "none";
+  document.querySelector(".hub").style.pointerEvents = "auto";
   document.querySelector(".highlight").style.height = "250px";
   document.querySelector(".highlight").style.width = "99vw";
 }
